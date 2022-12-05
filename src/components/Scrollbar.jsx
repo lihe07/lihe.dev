@@ -33,7 +33,7 @@ export default (props) => {
       </div>
 
       <div
-        class="absolute w-2 right-0 bg-red top-0"
+        class="absolute w-2 right-0 bg-white bg-op-40 rounded-b-5 top-0"
         style={{
           height: `${percent()}%`
         }}
