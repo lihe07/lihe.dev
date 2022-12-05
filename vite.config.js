@@ -1,24 +1,18 @@
-import { defineConfig } from 'vite'
-import solid from 'vite-plugin-solid'
+import solid from 'solid-start/vite'
 import unocss from 'unocss/vite'
-import mdx from '@mdx-js/rollup'
-import remarkGfm from 'remark-gfm'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
-    unocss(),
     {
-      ...mdx({
+      ...(await import('@mdx-js/rollup')).default({
         jsx: true,
         jsxImportSource: 'solid-js',
-        providerImportSource: 'solid-mdx',
-        remarkPlugins: [remarkGfm]
+        providerImportSource: 'solid-mdx'
       }),
       enforce: 'pre'
     },
-    solid({ extensions: ['.md', '.mdx'] })
-  ],
-  build: {
-    target: 'esnext'
-  }
+    solid({ extensions: ['.mdx', '.md'] }),
+    unocss()
+  ]
 })

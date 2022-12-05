@@ -1,44 +1,36 @@
 {
-  "name": "solidjs-ready",
-  "version": "0.0.0",
-  "description": "",
-  "type": "module",
+  "name": "test-solid-start",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build:sitemap": "node ./scripts/generateSitemap.js",
-    "build:meta": "node ./scripts/generateMeta.js",
-    "build:vite": "vite build",
-    "build": "run-s build:vite build:meta build:sitemap",
-    "serve": "vite preview",
+    "dev": "solid-start dev",
+    "build": "node ./scripts/clean.js && solid-start build && node ./scripts/prerender.js",
+    "start": "solid-start start",
     "lint": "eslint src --ext .js --ext .jsx",
-    "format": "prettier-eslint \"src/**/*.js\" \"src/**/*.jsx\" \"src/**/*.mdx\" --write"
+    "format": "prettier-eslint \"**/*.js\" \"**/*.jsx\" \"**/*.mdx\" \"**/*.json\" --write"
   },
-  "license": "Unlicense",
+  "type": "module",
   "devDependencies": {
-    "@aminya/minijson": "^0.6.2",
     "@mdx-js/rollup": "^2.1.5",
-    "eslint": "^8.27.0",
+    "@solidjs/meta": "^0.28.2",
+    "eslint": "^8.29.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.5.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-solid": "^0.8.0",
-    "htmlnano": "^2.0.2",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.7.1",
+    "eslint-plugin-solid": "^0.9.1",
+    "prettier": "^2.8.0",
     "prettier-eslint-cli": "^7.1.0",
-    "remark-gfm": "^3.0.1",
-    "rollup": "^3.2.5",
-    "solid-mdx": "^0.0.6",
-    "typescript": "^4.8.4",
-    "unocss": "^0.46.4",
-    "vite": "^3.2.3",
-    "vite-plugin-solid": "^2.4.0"
+    "rollup": "^3.5.1",
+    "solid-start-node": "^0.2.7",
+    "typescript": "^4.9.3",
+    "undici": "^5.13.0",
+    "unocss": "^0.47.5",
+    "unocss-preset-extra": "^0.4.3",
+    "vite": "^3.2.4"
   },
   "dependencies": {
-    "@solidjs/router": "^0.5.0",
-    "solid-js": "^1.6.1",
-    "solid-meta": "^0.28.1"
+    "@solidjs/router": "^0.5.1",
+    "solid-js": "^1.6.2",
+    "solid-mdx": "^0.0.6",
+    "solid-start": "^0.2.7"
   }
 }
