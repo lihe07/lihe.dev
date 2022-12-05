@@ -9,6 +9,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "@iconify/json": "^2.1.147",
     "@mdx-js/rollup": "^2.1.5",
     "@solidjs/meta": "^0.28.2",
     "eslint": "^8.29.0",
