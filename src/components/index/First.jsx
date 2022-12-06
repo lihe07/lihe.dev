@@ -1,13 +1,13 @@
 import { For } from 'solid-js'
+import { useNavigate } from 'solid-start'
 
 import Button from './Button'
 import style from './First.module.css'
 
-import bg from '../../assets/bg.jpg'
+import bg from '../../assets/bg.webp'
 import github from '../../assets/github.svg'
 import twitter from '../../assets/twitter.svg'
 import email from '../../assets/email.svg'
-import { useNavigate } from 'solid-start'
 
 const Left = () => {
   const navigate = useNavigate()
@@ -23,7 +23,7 @@ const Left = () => {
         <Button
           onClick={() => {
             document.getElementById('scroll').scrollTo({
-              top: window.innerHeight,
+              top: window.innerHeight + 10,
               behavior: 'smooth'
             })
           }}

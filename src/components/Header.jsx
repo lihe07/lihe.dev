@@ -1,6 +1,7 @@
 import { For } from 'solid-js'
 import { A, useLocation } from 'solid-start'
-import avatar from '../assets/avatar.jpg'
+
+import avatar from '../assets/avatar.webp'
 
 const routes = [
   {
