@@ -102,7 +102,7 @@ const Right = () => {
             target="_blank"
             class="bg-white bg-op-30 rounded-50% h-12 w-12 block flex items-center justify-center op-70 hover:op-100 active:scale-90 transition m-y-3"
           >
-            <img src={social.icon} alt={social.href} />
+            <img width="28" height="28" src={social.icon} alt={social.href} />
           </a>
         )}
       </For>
