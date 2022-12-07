@@ -1,4 +1,5 @@
 import { Outlet } from 'solid-start'
+// import '../../assets/katex/katex.min.css'
 
 export default () => {
   return (

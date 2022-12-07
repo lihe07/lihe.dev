@@ -4,10 +4,10 @@ import { useNavigate } from 'solid-start'
 import Button from './Button'
 import style from './First.module.css'
 
-import bg from '../../assets/bg.webp'
-import github from '../../assets/github.svg'
-import twitter from '../../assets/twitter.svg'
-import email from '../../assets/email.svg'
+import bg from '../../assets/images/bg.webp'
+import github from '../../assets/icons/github.svg'
+import twitter from '../../assets/icons/twitter.svg'
+import email from '../../assets/icons/email.svg'
 
 const Left = () => {
   const navigate = useNavigate()

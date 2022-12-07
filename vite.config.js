@@ -7,11 +7,17 @@ export default defineConfig({
     port: 3000,
     host: '127.0.0.1'
   },
+  resolve: {
+    alias: {
+      '@': '/src',
+      assets: '/src/assets'
+    }
+  },
   plugins: [
     {
       ...(await import('@mdx-js/rollup')).default({
         jsx: true,
-        jsxImportSource: 'solid-js',
+        jsxImportSource: 'solid-mdx',
         providerImportSource: 'solid-mdx'
       }),
       enforce: 'pre'

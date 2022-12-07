@@ -1,4 +1,4 @@
-import { createEffect, createSignal, onMount } from 'solid-js'
+import { createSignal, onMount } from 'solid-js'
 import { Motion } from '@motionone/solid'
 import ProfileContent from './ProfileContent'
 
@@ -24,8 +24,9 @@ export default () => {
   onMount(() => {
     document.getElementById('scroll').addEventListener('scroll', onScroll)
     window.addEventListener('resize', onScroll)
-
     heightDiff = outer.clientHeight - inner.clientHeight
+
+    onScroll()
 
     return () => {
       document.getElementById('scroll').removeEventListener('scroll', onScroll)
