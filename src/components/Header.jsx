@@ -9,8 +9,8 @@ const routes = [
     path: '/works'
   },
   {
-    name: 'Blogs',
-    path: '/blogs'
+    name: 'Blog',
+    path: '/blog'
   },
   {
     name: 'Contact',

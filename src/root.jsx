@@ -6,6 +6,7 @@ import {
   Head,
   Html,
   Meta,
+  Link,
   Routes,
   Scripts
 } from 'solid-start'
@@ -21,6 +22,7 @@ export default function Root () {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta name="description" content="SolidStart - Bare" />
         <Meta name="keywords" content="solid, solidjs, solid-start" />
+        <Link rel="icon" href="/favicon.ico" />
       </Head>
       <Body class="m0 bg-black color-white">
         <Scrollbar>

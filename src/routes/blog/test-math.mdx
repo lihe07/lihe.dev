@@ -1,0 +1,21 @@
+import Math from '../../components/blog/Math.jsx'
+
+export const meta = {
+  title: 'Test Math',
+  description: 'Test Math'
+}
+
+# Title with <Math>\LaTeX</Math>
+
+<Math>\LaTeX\ with\ KaTeX</Math>
+
+There is a Math block:
+
+<Math block>{String.raw`
+\begin{aligned}
+\frac{1}{2} &= \frac{1}{2} \\
+\frac{1}{2} &= \frac{1}{2} \\
+\frac{1}{2} &= \frac{1}{2} \\
+\frac{1}{2} &= \frac{1}{2} \\
+\end{aligned}
+`}</Math>
