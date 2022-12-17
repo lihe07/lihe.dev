@@ -2,7 +2,7 @@
   "name": "test-solid-start",
   "scripts": {
     "dev": "solid-start dev",
-    "build": "node ./scripts/clean.js && solid-start build && node ./scripts/prerender.js",
+    "build": "node ./scripts/pre.js && solid-start build && node ./scripts/prerender.js",
     "start": "solid-start start",
     "lint": "eslint src --ext .js --ext .jsx",
     "format": "prettier-eslint \"**/*.js\" \"**/*.jsx\" \"**/*.mdx\" \"**/*.json\" --write"
@@ -12,6 +12,7 @@
     "@iconify/json": "^2.1.149",
     "@mdx-js/rollup": "^2.1.5",
     "@solidjs/meta": "^0.28.2",
+    "decompress": "^4.2.1",
     "eslint": "^8.29.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",

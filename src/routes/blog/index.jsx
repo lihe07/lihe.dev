@@ -27,7 +27,7 @@ export default () => {
 
   return (
     <main>
-      <Title>lihe.dev - Blogs</Title>
+      <Title>lihe.dev - Blog</Title>
       <h1>Article List</h1>
       <pre>{JSON.stringify(data ? data() : '')}</pre>
 

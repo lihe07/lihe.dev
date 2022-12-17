@@ -3,7 +3,10 @@ import katex from 'katex'
 import 'katex/dist/katex.min.css'
 
 export default (props) => {
-  const rendered = () => katex.renderToString(props.children.toString())
+  const rendered = () =>
+    katex.renderToString(props.children.toString(), {
+      displayMode: props.block
+    })
   return (
     <>
       <Show when={props.block}>

@@ -1,5 +1,7 @@
 import solid from 'solid-start/vite'
 import unocss from 'unocss/vite'
+import resolver from './scripts/resolver'
+import replaceMath from './scripts/replaceMath'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -9,11 +11,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': '/src',
-      assets: '/src/assets'
+      '@': '/src'
     }
   },
   plugins: [
+    replaceMath(),
     {
       ...(await import('@mdx-js/rollup')).default({
         jsx: true,
@@ -22,6 +24,7 @@ export default defineConfig({
       }),
       enforce: 'pre'
     },
+    resolver(),
     solid({ extensions: ['.mdx', '.md'] }),
     unocss()
   ]
