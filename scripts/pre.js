@@ -35,7 +35,7 @@ async function getArticles () {
 
   console.log('Decompressing...')
   const files = await decompress('./dist/repo.zip', './dist/repo')
-  console.log('files', files)
+  // console.log('files', files)
 
   return files.filter((file) => (file.path + '/').split('/')[1] === 'Blog')
 }
@@ -44,7 +44,7 @@ async function parseArticles (files) {
   // For each non-markdown file: find its dependant
 }
 
-// // Clean up
-// if (fs.existsSync('dist')) {
-//   fs.rmSync('dist', { recursive: true })
-// }
+// Clean up
+if (fs.existsSync('dist')) {
+  fs.rmSync('dist', { recursive: true })
+}

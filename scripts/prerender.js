@@ -92,4 +92,6 @@ async function main () {
   await fs.writeFile('./dist/sitemap.xml', sitemap)
 }
 
+console.log('Prerendering...')
 main().catch((e) => console.error(e))
+console.log('Prerendered!')
