@@ -41,7 +41,8 @@ async function getArticles () {
 }
 
 async function parseArticles (files) {
-  // For each non-markdown file: find its dependant
+  // Copy markdown files to /src/pages/blog/
+  // Copy assets to /src/assets/blog/
 }
 
 // Clean up
