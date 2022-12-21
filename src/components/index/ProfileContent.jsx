@@ -12,6 +12,7 @@ export default (props) => {
   const [title, setTitle] = createSignal('')
   const [firstQuery, setFirstQuery] = createSignal('mysql> ')
   const [showFirstQuery, setShowFirstQuery] = createSignal(0)
+  const [showFirstResult, setShowFirstResult] = createSignal(0)
 
   let typing, halting
 
@@ -43,7 +44,7 @@ export default (props) => {
     }
     if (percent > keyframes.firstQueryIn && firstQuery() === 'mysql> ') {
       setShowFirstQuery(true)
-      typeMachine('SELECT * FROM human WHERE name="He Li";', setFirstQuery, 30)
+      typeMachine('SELECT * FROM human WHERE name="He Li";', setFirstQuery, 20)
     } else if (
       percent <= keyframes.firstQueryIn &&
       firstQuery() !== 'mysql> '
@@ -54,6 +55,16 @@ export default (props) => {
         if (typing === setFirstQuery) halting = true
         setFirstQuery('mysql> ')
       }, 100)
+    }
+
+    // If firstQuery is completed: show firstResult
+    if (
+      showFirstQuery() &&
+      firstQuery() === 'mysql> SELECT * FROM human WHERE name="He Li";'
+    ) {
+      setShowFirstResult(true)
+    } else {
+      setShowFirstResult(false)
     }
   }
 
@@ -71,6 +82,18 @@ export default (props) => {
       >
         {firstQuery()}
       </p>
+      <p
+        class="transition font-mono"
+        classList={{
+          'op-0': !showFirstResult(),
+          'op-100': showFirstResult()
+        }}
+      >
+        <span>+---------------------+</span>
+        <br />
+        <span>| name | He Li |</span>
+      </p>
+      <p class="transition font-mono" />
     </div>
   )
 }

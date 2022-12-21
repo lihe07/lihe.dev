@@ -2,6 +2,7 @@ import { For } from 'solid-js'
 import { A, useLocation } from 'solid-start'
 
 import avatar from '@/assets/images/avatar.50x50.webp'
+import ProgressBar from './ProgressBar'
 
 const routes = [
   {
@@ -31,7 +32,9 @@ export default () => {
         'relative top-0': !isIndex()
       }}
     >
-      {/* BG */}
+      {/* ProgressBar */}
+      <ProgressBar />
+      {/* Main */}
       <div class="max-w-300 w-full ma flex justify-between items-center">
         <div class="flex items-center">
           <img src={avatar} alt="Avatar" class="w-10 h-10 rounded-50%" />
