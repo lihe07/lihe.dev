@@ -1,0 +1,1 @@
+import{g as s,a,i,c as l,T as o,t as m}from"./entry-client.f253d0fe.js";const c=m("<main><!#><!/><h1>Works</h1></main>"),h=()=>(()=>{const e=s(c),n=e.firstChild,[t,r]=a(n.nextSibling);return t.nextSibling,i(e,l(o,{children:"lihe.dev - Works"}),t,r),e})();export{h as default};
