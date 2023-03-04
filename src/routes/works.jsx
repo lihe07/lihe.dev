@@ -1,4 +1,4 @@
-import { Title } from 'solid-start'
+import { Title } from "solid-start";
 
 export default () => {
   return (
@@ -6,5 +6,5 @@ export default () => {
       <Title>lihe.dev - Works</Title>
       <h1>Works</h1>
     </main>
-  )
-}
+  );
+};

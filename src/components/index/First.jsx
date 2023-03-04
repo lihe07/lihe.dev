@@ -1,31 +1,32 @@
-import { For } from 'solid-js'
-import { useNavigate } from 'solid-start'
+import { For } from "solid-js";
+import { useNavigate } from "solid-start";
 
-import Button from './Button'
-import style from './First.module.css'
+import Button from "./Button";
+import style from "./First.module.css";
 
-import bg from '../../assets/images/bg.webp'
-import github from '../../assets/icons/github.svg'
-import twitter from '../../assets/icons/twitter.svg'
-import email from '../../assets/icons/email.svg'
+import bg from "../../assets/images/bg.webp";
+import github from "../../assets/icons/github.svg";
+import twitter from "../../assets/icons/twitter.svg";
+import email from "../../assets/icons/email.svg";
 
 const Left = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div>
-      <p class="font-sans op-60 text-7 mt0 mb-5">Hello!!</p>
-      <p class="font-serif text-13 mt0">
+      <p class="font-sans op-60 text-7 mt-0 mb-5">Hello!!</p>
+      <p class="font-serif md:text-13 text-10 mt-0 mr-5">
         I'm <u class="underline-4">He Li</u>, a student and <br />
         Open Source + AI fan
       </p>
 
-      <div class="flex font-sans items-center">
+      {/* Buttons */}
+      <div class="flex font-sans items-center sm:position-unset absolute sm:m0 mr-10">
         <Button
           onClick={() => {
-            document.getElementById('scroll').scrollTo({
+            document.getElementById("scroll").scrollTo({
               top: window.innerHeight + 10,
-              behavior: 'smooth'
-            })
+              behavior: "smooth",
+            });
           }}
           class={style.readmore}
         >
@@ -43,9 +44,9 @@ const Left = () => {
           Read More
         </Button>
         <span class="op-80 mx-5">Or</span>
-        <Button class={style.contact} onClick={() => navigate('/contact')}>
+        <Button class={style.contact} onClick={() => navigate("/contact")}>
           <svg
-            class={'transition-all ' + style.first}
+            class={"transition-all " + style.first}
             xmlns="http://www.w3.org/2000/svg"
             width="19"
             height="19"
@@ -58,7 +59,7 @@ const Left = () => {
             />
           </svg>
           <svg
-            class={'mr-1 transition-all ' + style.second}
+            class={"mr-1 transition-all " + style.second}
             xmlns="http://www.w3.org/2000/svg"
             width="19"
             height="19"
@@ -70,27 +71,27 @@ const Left = () => {
               d="M6.67,2.66C7.12,2.21 7.67,1.85 8.29,1.71C9.44,1.45 10.58,1.79 11.38,2.58C12.18,3.38 12.52,4.52 12.25,5.68C12.1,6.3 11.75,6.85 11.3,7.3L10.3,8.28L11.47,9.46L12.33,8.56C14.32,6.58 14.45,3.18 12.37,1.28C11.44,0.43 10.25,0 9.07,0C7.77,0 6.52,0.52 5.61,1.44L0.81,6.28C-0.28,7.37 -0.27,9.13 0.82,10.22L3.44,12.84L4.59,11.68L2.29,9.41C1.64,8.75 1.64,7.71 2.29,7.05L6.67,2.66Z "
             />
           </svg>
-          Get in Touch
+          Contact
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const socials = [
   {
     icon: github,
-    href: 'https://github.com/lihe07'
+    href: "https://github.com/lihe07",
   },
   {
     icon: twitter,
-    href: 'https://twitter.com/HeLi07784212'
+    href: "https://twitter.com/HeLi07784212",
   },
   {
     icon: email,
-    href: 'mailto:li@imlihe.com'
-  }
-]
+    href: "mailto:li@imlihe.com",
+  },
+];
 
 const Right = () => {
   return (
@@ -107,13 +108,13 @@ const Right = () => {
         )}
       </For>
     </div>
-  )
-}
+  );
+};
 export default () => {
   return (
     <section
       class="h-screen w-full bg-center bg-cover"
-      style={{ 'background-image': `url(${bg})` }}
+      style={{ "background-image": `url(${bg})` }}
     >
       <div class="h-full w-full backdrop-blur bg-black bg-op-50 flex items-center px-10 box-border op-0 animate-fade-in animate-delay-500 animate-duration-300 animate-mode-forwards">
         <div class="max-w-300 ma w-full flex justify-between">
@@ -123,5 +124,5 @@ export default () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

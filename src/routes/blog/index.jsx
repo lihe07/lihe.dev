@@ -1,35 +1,35 @@
-import { createResource, For } from 'solid-js'
-import { Title, useRouteData } from 'solid-start'
+import { createResource, For } from "solid-js";
+import { Title, useRouteData } from "solid-start";
 
 export const routeData = () => {
   return createResource(async () => {
-    const blogs = []
+    const blogs = [];
 
-    const _blogs = import.meta.glob('./*.{mdx,md}')
+    const _blogs = import.meta.glob("./*.{mdx,md}");
 
     for (const path in _blogs) {
-      const blog = await _blogs[path]()
+      const blog = await _blogs[path]();
       blogs.push({
         href: path
-          .replace('./', '/blog/')
-          .replace('.mdx', '')
-          .replace('.md', ''),
-        ...blog.meta
-      })
+          .replace("./", "/blog/")
+          .replace(".mdx", "")
+          .replace(".md", ""),
+        ...blog.meta,
+      });
     }
 
-    return blogs
-  })[0]
-}
+    return blogs;
+  })[0];
+};
 
 export default () => {
-  const data = useRouteData()
+  const data = useRouteData();
 
   return (
     <main>
       <Title>lihe.dev - Blog</Title>
       <h1>Article List</h1>
-      <pre>{JSON.stringify(data ? data() : '')}</pre>
+      <pre>{JSON.stringify(data ? data() : "")}</pre>
 
       <For each={data ? data() : []}>
         {(blog) => (
@@ -41,5 +41,5 @@ export default () => {
         )}
       </For>
     </main>
-  )
-}
+  );
+};

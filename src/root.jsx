@@ -1,5 +1,5 @@
 // @refresh reload
-import { Suspense } from 'solid-js'
+import { Suspense } from "solid-js";
 import {
   Body,
   FileRoutes,
@@ -8,13 +8,13 @@ import {
   Meta,
   Link,
   Routes,
-  Scripts
-} from 'solid-start'
-import 'uno.css'
-import Scrollbar from './components/Scrollbar'
-import Header from './components/Header'
+  Scripts,
+} from "solid-start";
+import "uno.css";
+import Scrollbar from "./components/Scrollbar";
+import Header from "./components/Header";
 
-export default function Root () {
+export default function Root() {
   return (
     <Html lang="en">
       <Head>
@@ -37,5 +37,5 @@ export default function Root () {
         <Scripts />
       </Body>
     </Html>
-  )
+  );
 }

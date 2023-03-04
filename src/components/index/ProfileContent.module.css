@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Square Dance';
-  src: url('@/assets/fonts/Square Dance.woff') format('woff');
+  font-family: "Square Dance";
+  src: url("@/assets/fonts/Square Dance.woff") format("woff");
 }
 
 .fontPixel {
-  font-family: 'Square Dance';
+  font-family: "Square Dance";
 }
