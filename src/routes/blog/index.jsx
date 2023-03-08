@@ -26,7 +26,7 @@ export default () => {
   const data = useRouteData();
 
   return (
-    <main>
+    <main class="max-w-300 ma">
       <Title>lihe.dev - Blog</Title>
       <h1>Article List</h1>
       <pre>{JSON.stringify(data ? data() : "")}</pre>

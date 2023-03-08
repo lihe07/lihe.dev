@@ -13,6 +13,7 @@
     "@motionone/solid": "^10.15.3",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.5.1",
+    "blaze-slider": "^1.9.1",
     "decompress": "^4.2.1",
     "katex": "^0.16.4",
     "prettier": "^2.8.1",

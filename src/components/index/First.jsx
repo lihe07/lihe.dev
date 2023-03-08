@@ -1,4 +1,4 @@
-import { For } from "solid-js";
+import { For, onMount } from "solid-js";
 import { useNavigate } from "solid-start";
 
 import Button from "./Button";
@@ -111,12 +111,29 @@ const Right = () => {
   );
 };
 export default () => {
+  let isFirstLoad;
+  if (typeof window !== "undefined" && window.isNotFirstLoad) {
+    isFirstLoad = false;
+  } else {
+    isFirstLoad = true;
+  }
+
+  onMount(() => {
+    window.isNotFirstLoad = true;
+  });
+
   return (
     <section
       class="h-screen w-full bg-center bg-cover"
       style={{ "background-image": `url(${bg})` }}
     >
-      <div class="h-full w-full backdrop-blur bg-black bg-op-50 flex items-center px-10 box-border op-0 animate-fade-in animate-delay-500 animate-duration-300 animate-mode-forwards">
+      <div
+        class="h-full w-full backdrop-blur bg-black bg-op-50 flex items-center px-10 box-border op-0 animate-fade-in animate-mode-forwards"
+        classList={{
+          "animate-delay-1500 animate-duration-800": isFirstLoad,
+          "animate-delay-500 animate-duration-300": !isFirstLoad,
+        }}
+      >
         <div class="max-w-300 ma w-full flex justify-between">
           {/* Left */}
           <Left />

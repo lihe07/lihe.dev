@@ -1651,6 +1651,11 @@ bl@^1.0.0:
     readable-stream "^2.3.5"
     safe-buffer "^5.1.1"
 
+blaze-slider@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.npmmirror.com/blaze-slider/-/blaze-slider-1.9.1.tgz#5c3a0eeaab065966a6b0cdc8917b4c7d8ba3c3ad"
+  integrity sha512-XD2NQhgI7lrZC4AH6G1AacBXtYMV5W3p3pbu0QJb2V8iRcLrRTO1jNhVTwm1nyTmlmfCQSl3/+5TT+DhdW40cQ==
+
 brace-expansion@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmmirror.com/brace-expansion/-/brace-expansion-2.0.1.tgz#1edc459e0f0c548486ecf9fc99f2221364b9a0ae"

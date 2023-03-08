@@ -8,9 +8,9 @@ import "./markdown.css";
  *
  * @param {Props} props
  */
-export default function BlogArticleLayout(props) {
+export default (props) => {
   return (
-    <main>
+    <>
       <div
         class="h-100 w-full bg-slate-9 bg-cover bg-center"
         style={{ "background-image": `url(${props.cover})` }}
@@ -25,6 +25,6 @@ export default function BlogArticleLayout(props) {
       <div class="p-x-10 mt-10">
         <article class="markdown-body ma max-w-300">{props.children}</article>
       </div>
-    </main>
+    </>
   );
-}
+};

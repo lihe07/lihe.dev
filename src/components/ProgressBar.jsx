@@ -2,6 +2,10 @@ import { createEffect, createSignal, Show } from "solid-js";
 import { Motion } from "@motionone/solid";
 import { useIsRouting } from "solid-start";
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export default () => {
   const isRouting = useIsRouting();
   const [percent, setPercent] = createSignal(0);
@@ -9,27 +13,28 @@ export default () => {
   const [lazy, setLazy] = createSignal(false);
 
   createEffect(() => {
-    // console.log('isRouting', isRouting())
+    console.log("isRouting", isRouting());
     if (isRouting()) {
       setShow(true);
       setLazy(true);
       setPercent(90);
     } else {
-      setPercent(100);
-      setTimeout(() => {
+      (async () => {
+        await sleep(100);
+        setPercent(100);
+        await sleep(600);
         setShow(false);
-        setTimeout(() => {
-          setLazy(false);
-          setPercent(0);
-        }, 300);
-      }, 600);
+        await sleep(300);
+        setLazy(false);
+        setPercent(0);
+      })();
     }
   });
   return (
     <Show when={lazy()}>
       <Motion.div
-        class="fixed top-0 h-2 z-10 left-0 bg-sky-5 op-0 w-0 transition"
-        classList={{ "op-60": show() }}
+        class="fixed top-0 h-5 z-10 left-0 bg-white shadow-white op-0 w-0 transition"
+        classList={{ "op-100": show() }}
         animate={{
           width: percent() + "%",
         }}

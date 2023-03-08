@@ -1,3 +1,7 @@
 export default () => {
-  return <h1>Contact</h1>;
+  return (
+    <main class="max-w-300 ma">
+      <h1>Contact</h1>
+    </main>
+  );
 };

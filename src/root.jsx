@@ -13,6 +13,7 @@ import {
 import "uno.css";
 import Scrollbar from "./components/Scrollbar";
 import Header from "./components/Header";
+import Transition from "./components/Transition";
 
 export default function Root() {
   return (
@@ -27,11 +28,14 @@ export default function Root() {
       <Body class="m0 bg-black color-white">
         <Scrollbar>
           <Header />
-          <Suspense fallback={<h1>Loading</h1>}>
-            <Routes>
-              <FileRoutes />
-            </Routes>
-          </Suspense>
+
+          <Transition>
+            <Suspense>
+              <Routes>
+                <FileRoutes />
+              </Routes>
+            </Suspense>
+          </Transition>
         </Scrollbar>
 
         <Scripts />
