@@ -124,16 +124,15 @@ export default () => {
 
   return (
     <section
-      class="h-screen w-full bg-center bg-cover"
+      class="h-screen w-full bg-center bg-cover op-0"
+      classList={{
+        "animate-fade-in animate-mode-forwards animate-delay-500 animate-duration-800":
+          isFirstLoad,
+        "!op-100": !isFirstLoad,
+      }}
       style={{ "background-image": `url(${bg})` }}
     >
-      <div
-        class="h-full w-full backdrop-blur bg-black bg-op-50 flex items-center px-10 box-border op-0 animate-fade-in animate-mode-forwards"
-        classList={{
-          "animate-delay-1500 animate-duration-800": isFirstLoad,
-          "animate-delay-500 animate-duration-300": !isFirstLoad,
-        }}
-      >
+      <div class="h-full w-full backdrop-blur bg-black bg-op-50 flex items-center px-10 box-border op-0 animate-fade-in animate-mode-forwards animate-delay-300 animate-duration-300">
         <div class="max-w-300 ma w-full flex justify-between">
           {/* Left */}
           <Left />

@@ -2,7 +2,6 @@ import { createEffect, createSignal, For, on, onMount } from "solid-js";
 import { A, useLocation } from "solid-start";
 
 import avatar from "@/assets/images/avatar.50x50.webp";
-import ProgressBar from "./ProgressBar";
 
 const routes = [
   {
@@ -35,7 +34,7 @@ export default () => {
       class="w-full font-sans z-1 box-border px-10 py-5 transition-all overflow-hidden op-0"
       classList={{
         "absolute top-15 left-0": isIndex(),
-        "animate-fade-in animate-mode-forwards animate-delay-1500 animate-duration-800":
+        "animate-fade-in animate-mode-forwards animate-delay-500 animate-duration-800":
           fadeIn(),
         "relative top-0": !isIndex(),
         "!op-100": !fadeIn(),
