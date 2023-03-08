@@ -1,5 +1,5 @@
 import { createResource, For } from "solid-js";
-import { Title, useRouteData } from "solid-start";
+import { A, Title, useRouteData } from "solid-start";
 
 export const routeData = () => {
   return createResource(async () => {
@@ -31,15 +31,7 @@ export default () => {
       <h1>Article List</h1>
       <pre>{JSON.stringify(data ? data() : "")}</pre>
 
-      <For each={data ? data() : []}>
-        {(blog) => (
-          <div>
-            <h2>{blog.title}</h2>
-            <p>{blog.description}</p>
-            <a href={blog.href}>Link</a>
-          </div>
-        )}
-      </For>
+      <A href="/blog/114514">Test</A>
     </main>
   );
 };
