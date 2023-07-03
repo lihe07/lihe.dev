@@ -1,4 +1,4 @@
-import { createSignal, onCleanup } from "solid-js";
+import { createSignal, onCleanup, onMount } from "solid-js";
 
 import style from "./Scrollbar.module.css";
 
@@ -12,14 +12,10 @@ export default (props) => {
     setPercent(percent);
   }
 
-  function useScrollbar(_ele) {
-    ele = _ele;
+  onMount(() => {
     ele.addEventListener("scroll", onScroll);
     window.addEventListener("resize", onScroll);
-  }
-
-  onCleanup(() => {
-    window.removeEventListener("resize", onScroll);
+    return () => window.removeEventListener("resize", onScroll);
   });
 
   return (
@@ -27,7 +23,7 @@ export default (props) => {
       <div
         class={"w-full h-screen overflow-scroll relative " + style.hide}
         id="scroll"
-        ref={useScrollbar}
+        ref={ele}
       >
         {props.children}
       </div>

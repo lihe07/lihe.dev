@@ -13,6 +13,7 @@ import {
 import "uno.css";
 import Scrollbar from "./components/Scrollbar";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Transition from "./components/Transition";
 
 export default function Root() {
@@ -36,6 +37,8 @@ export default function Root() {
               </Routes>
             </Suspense>
           </Transition>
+
+          <Footer></Footer>
         </Scrollbar>
 
         <Scripts />
