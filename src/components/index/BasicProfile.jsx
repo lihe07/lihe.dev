@@ -13,7 +13,7 @@ export default () => {
   const [percent, setPercent] = createSignal(0);
 
   function onScroll() {
-    let bounding = container.getBoundingClientRect();
+    const bounding = container.getBoundingClientRect();
     setPercent(-bounding.top / bounding.height);
     onPercentChange();
   }

@@ -40,7 +40,7 @@ export default (props) => {
         BASIC PROFILE
       </h1>
       <p class="transition font-mono">
-        lihe07@liheserver:~$ psql -U he -d profile
+        lihe07@server:~$ psql -U lihe -d profile
       </p>
       <p class="transition font-mono">
         psql (13.2 (Ubuntu 13.2-1.pgdg20.04+1))
@@ -62,7 +62,19 @@ export default (props) => {
         <span>(1 row)</span>
       </div>
 
-      <p class="transition font-mono"></p>
+      <p class="transition font-mono">
+        profile=# SELECT PLATFORM,ACCOUNT FROM socials WHERE NAME = "He Li";
+      </p>
+
+      <div class="transition font-mono">
+        <SplitLine />
+        <Line items={["platform", "account"]} />
+        <SplitLine />
+
+        <Line items={["Twitter (X)", "123"]} />
+        <Line items={["Github", "lihe07"]} />
+        <SplitLine />
+      </div>
     </div>
   );
 };

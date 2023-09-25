@@ -5,9 +5,7 @@ import Button from "./Button";
 import style from "./First.module.css";
 
 import bg from "../../assets/images/bg.webp";
-import github from "../../assets/icons/github.svg";
-import twitter from "../../assets/icons/twitter.svg";
-import email from "../../assets/icons/email.svg";
+import { socials } from "../../config";
 
 const Left = () => {
   const navigate = useNavigate();
@@ -47,7 +45,6 @@ const Left = () => {
         <Button class={style.contact} onClick={() => navigate("/contact")}>
           <svg
             class={"transition-all " + style.first}
-            xmlns="http://www.w3.org/2000/svg"
             width="19"
             height="19"
             viewBox="-1 0 17 13"
@@ -60,7 +57,6 @@ const Left = () => {
           </svg>
           <svg
             class={"mr-1 transition-all " + style.second}
-            xmlns="http://www.w3.org/2000/svg"
             width="19"
             height="19"
             viewBox="0 0 17 13"
@@ -77,21 +73,6 @@ const Left = () => {
     </div>
   );
 };
-
-const socials = [
-  {
-    icon: github,
-    href: "https://github.com/lihe07",
-  },
-  {
-    icon: twitter,
-    href: "https://twitter.com/HeLi07784212",
-  },
-  {
-    icon: email,
-    href: "mailto:li@imlihe.com",
-  },
-];
 
 const Right = () => {
   return (
