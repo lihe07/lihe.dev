@@ -1,0 +1,28 @@
+.svg {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .svg {
+    transform: translateY(-150%) scaleY(3);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-100%) var(--scale);
+  }
+  100% {
+    transform: translateX(100%) var(--scale);
+  }
+}
+
+.wave {
+  animation: move linear infinite;
+  transform-origin: center;
+  --scale: scaleX(1);
+}
+
+.wave.flip {
+  --scale: scaleX(-1);
+}

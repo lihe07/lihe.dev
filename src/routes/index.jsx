@@ -3,6 +3,7 @@ import { Meta, Title } from "solid-start";
 import BasicProfile from "@/components/index/BasicProfile";
 import First from "@/components/index/First";
 import WhatIDo from "@/components/index/WhatIDo";
+import Wave from "@/components/index/Wave";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <First />
       <BasicProfile />
       <WhatIDo />
+      <Wave />
     </main>
   );
 }

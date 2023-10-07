@@ -77,7 +77,7 @@ const Left = () => {
 const Right = () => {
   return (
     <div class="flex flex-col items-center justify-center">
-      <For each={socials}>
+      <For each={socials.filter((e) => !(e.showInFirst === false))}>
         {(social) => (
           <a
             href={social.href}
