@@ -91,3 +91,35 @@ export const footerLinks = [
     ],
   },
 ];
+
+// export const tags = [
+//   {
+//     name: "Technologies",
+//     id: "technologies",
+//     color: "sky-5",
+//   },
+//   {
+//     id: "quantum-chemistry",
+//     color: "teal-9",
+//   },
+//   {
+//     name: "Opearations Research",
+//     id: "or",
+//     color: "indigo-5",
+//   },
+// ];
+
+export const tags = {
+  technologies: {
+    name: "Technologies",
+    color: "#0ea5e9",
+  },
+  "quantum-chemistry": {
+    name: "Quantum Chemistry",
+    color: "#134e4a",
+  },
+  or: {
+    name: "Opearations Research",
+    color: "#6366f1",
+  },
+};

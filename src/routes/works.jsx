@@ -1,10 +1,14 @@
+import PageHead from "@/components/PageHead";
 import { Title } from "solid-start";
 
 export default () => {
-  return (
-    <main class="max-w-300 ma">
-      <Title>lihe.dev - Works</Title>
-      <h1>Works</h1>
-    </main>
-  );
+	return (
+		<main>
+			<Title>lihe.dev - Works</Title>
+			<PageHead
+				title="Works and Projects"
+				description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+			/>
+		</main>
+	);
 };

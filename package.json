@@ -1,38 +1,39 @@
 {
-	"name": "test-solid-start",
-	"scripts": {
-		"dev": "solid-start dev",
-		"build": "solid-start build",
-		"start": "solid-start start",
-		"format": "prettier --write .",
-		"postinstall": "patch-package"
-	},
-	"type": "module",
-	"dependencies": {
-		"@iconify/json": "^2.2.125",
-		"@mdx-js/rollup": "^2.1.5",
-		"@motionone/solid": "^10.16.4",
-		"@solidjs/meta": "^0.28.6",
-		"@solidjs/router": "^0.8.3",
-		"blaze-slider": "^1.9.3",
-		"decompress": "^4.2.1",
-		"katex": "^0.16.9",
-		"patch-package": "^8.0.0",
-		"prettier": "^3.0.3",
-		"remark-math": "^6.0.0",
-		"rollup": "^4.0.2",
-		"solid-js": "^1.7.12",
-		"solid-mdx": "^0.0.7",
-		"solid-start": "^0.3.6",
-		"solid-start-netlify": "^0.3.6",
-		"solid-start-static": "^0.3.6",
-		"typescript": "^5.2.2",
-		"undici": "^5.25.4",
-		"unocss": "^0.56.5",
-		"unocss-preset-extra": "^0.5.2",
-		"vite": "^4.4.11"
-	},
-	"engines": {
-		"node": ">=18"
-	}
+  "name": "test-solid-start",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start",
+    "format": "prettier --write .",
+    "postinstall": "patch-package"
+  },
+  "type": "module",
+  "dependencies": {
+    "@iconify/json": "^2.2.128",
+    "@mdx-js/rollup": "^2.1.5",
+    "@motionone/solid": "^10.16.4",
+    "@solidjs/meta": "^0.28.6",
+    "@solidjs/router": "^0.8.3",
+    "blaze-slider": "^1.9.3",
+    "decompress": "^4.2.1",
+    "katex": "^0.16.9",
+    "patch-package": "^8.0.0",
+    "prettier": "^3.0.3",
+    "remark-math": "^6.0.0",
+    "rollup": "^4.0.2",
+    "solid-js": "^1.8.1",
+    "solid-mdx": "^0.0.7",
+    "solid-start": "^0.3.6",
+    "solid-start-netlify": "^0.3.6",
+    "solid-start-static": "^0.3.6",
+    "typescript": "^5.2.2",
+    "undici": "^5.26.3",
+    "unocss": "^0.56.5",
+    "unocss-preset-extra": "^0.5.2",
+    "vite": "^4.4.11",
+    "yaml": "^2.3.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }

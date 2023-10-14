@@ -1,29 +1,36 @@
+import Tag from "./Tag";
+import PageHead from "../PageHead";
 import "./markdown.css";
+import { BlogDescription } from "./BlogDescription";
 
 /**
+ * @typedef Tag
+ * @property {string} color
+ * @property {string} name
+ *
+ *
  * @typedef Props
  * @property {string} title
  * @property {string} [cover]
+ * @property {Tag[]} tags
  * @property {JSX.Element} children
- *
+ * @property {Date | undefined} date
+ * @property {string | undefined} location
  * @param {Props} props
  */
 export default (props) => {
   return (
     <>
-      <div
-        class="h-100 w-full bg-slate-9 bg-cover bg-center"
-        style={{ "background-image": `url(${props.cover})` }}
-      >
-        <div
-          class="w-full h-full flex items-center justify-center"
-          classList={{ "bg-black bg-op-30": props.cover }}
-        >
-          <h1 class="font-serif tracking-wide">{props.title}</h1>
+      <PageHead title={props.title} cover={props.cover}>
+        <p class="op-70 text-xl font-sans">
+          <BlogDescription {...props} />
+        </p>
+        <div class="flex">
+          <For each={props.tags}>{(e) => <Tag {...e} />}</For>
         </div>
-      </div>
-      <div class="p-x-10 mt-10">
-        <article class="markdown-body ma max-w-300">{props.children}</article>
+      </PageHead>
+      <div class="px-10 my-10">
+        <article class="markdown-body ma max-w-300 ">{props.children}</article>
       </div>
     </>
   );
