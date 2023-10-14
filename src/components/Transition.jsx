@@ -1,3 +1,4 @@
+import { Motion } from "@motionone/solid";
 import { useBeforeLeave } from "@solidjs/router";
 import { createEffect, createSignal } from "solid-js";
 import { useIsRouting } from "solid-start";
@@ -8,7 +9,9 @@ export default function Transition(props) {
   const isRouting = useIsRouting();
   createEffect(() => {
     if (!isRouting()) {
-      setTimeout(() => setShow(true), 150);
+      setTimeout(() => {
+        setShow(true);
+      }, 500);
     }
   });
 
@@ -18,11 +21,11 @@ export default function Transition(props) {
 
     setTimeout(() => {
       e.retry(true);
-    }, 150);
+    }, 500);
   });
 
   return (
-    <div class="op-0 transition-opacity-150" classList={{ "!op-100": show() }}>
+    <div class="op-0 transition-opacity-500" classList={{ "!op-100": show() }}>
       {props.children}
     </div>
   );

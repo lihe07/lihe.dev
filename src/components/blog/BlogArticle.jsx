@@ -19,15 +19,15 @@ import { BlogDescription } from "./BlogDescription";
  * @param {Props} props
  */
 export default (props) => {
+  console.log("tags", props.tags);
+
   return (
     <>
       <PageHead title={props.title} cover={props.cover}>
         <p class="op-70 text-xl font-sans">
           <BlogDescription {...props} />
         </p>
-        <div class="flex">
-          <For each={props.tags}>{(e) => <Tag {...e} />}</For>
-        </div>
+        <div class="flex"></div>
       </PageHead>
       <div class="px-10 my-10">
         <article class="markdown-body ma max-w-300 ">{props.children}</article>

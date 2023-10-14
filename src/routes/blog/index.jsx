@@ -2,7 +2,7 @@ import { createResource, For } from "solid-js";
 import { A, Title, useRouteData } from "solid-start";
 import Section from "@/components/Section";
 import PageHead from "@/components/PageHead";
-import blog from "@/blog.json";
+import blog from "@/blog";
 import { BlogDescription } from "@/components/blog/BlogDescription";
 import Tag from "@/components/blog/Tag";
 
@@ -16,9 +16,7 @@ function Blog(props) {
       <div class="py-3">
         <h2 class="text-4xl">{props.title}</h2>
 
-        <div>
-          <For each={props.tags}>{(e) => <Tag {...e} />}</For>
-        </div>
+        <div>{/* <For each={props.tags}>{(e) => <Tag {...e} />}</For> */}</div>
 
         <p class="text-xl op-70">
           <BlogDescription {...props} />
@@ -40,7 +38,7 @@ export default () => {
 
       <Section class="my-20">
         <div class="grid md:grid-cols-2 grid-cols-1">
-          <For each={blog}>{(e) => <Blog {...e} />}</For>
+          <For each={blog}>{(e) => <Blog {...e} key={e.slug} />}</For>
         </div>
       </Section>
     </main>

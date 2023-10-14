@@ -9,7 +9,7 @@ import { parse } from "yaml";
 
 function transform() {
   //   Clean up
-  fs.rmSync(path.join(process.cwd(), "src", "blog.json"), { force: true });
+  fs.rmSync(path.join(process.cwd(), "src", "blog.js"), { force: true });
   for (const file of fs.readdirSync(
     path.join(process.cwd(), "src", "routes", "blog")
   )) {
@@ -53,8 +53,8 @@ function transform() {
   }
 
   fs.writeFileSync(
-    path.join(process.cwd(), "src", "blog.json"),
-    JSON.stringify(blogMeta)
+    path.join(process.cwd(), "src", "blog.js"),
+    `export default ${JSON.stringify(blogMeta)}`
   );
 }
 
