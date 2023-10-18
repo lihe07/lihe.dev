@@ -14,7 +14,9 @@ export default function PageHead(props) {
         class={"relative top-0 bg-black/50 z-2 w-full pt-5 pb-10 " + style.main}
       >
         <Section class="mt-33">
-          <h1 class="font-serif text-6xl font-light mb-0">{props.title}</h1>
+          <h1 class="font-serif leading-snug text-6xl font-light mb-0">
+            {props.title}
+          </h1>
           <Show when={props.description}>
             <p class="font-sans text-3xl leading-relaxed md:max-w-70% op-60">
               {props.description}

@@ -1,16 +1,14 @@
+import PageHead from "@/components/PageHead";
 import { Title } from "solid-start";
-import { HttpStatusCode } from "solid-start/server";
 
 export default () => {
   return (
-    <main class="w-full text-center">
+    <main>
       <Title>lihe.dev - Not Found</Title>
-      <HttpStatusCode code={404} />
-      <div></div>
-      <h1>Not Found</h1>
-      <h2>
-        TODO: Re-design this page. <br />
-      </h2>
+      <PageHead
+        title="This page could not be found"
+        description="This site might be under construction for a long while. Sorry for that!"
+      />
     </main>
   );
 };
