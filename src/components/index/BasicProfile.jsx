@@ -71,7 +71,7 @@ export default () => {
   return (
     <section class="w-full bg-black" ref={container}>
       <Motion.div
-        class="h-screen bg-#001712 w-full op-0 px-10 box-border"
+        class="min-h-screen bg-#001712 w-full op-0 px-10 box-border"
         style={{ "box-shadow": "inset 0px 0px 100px 5px rgba(0, 0, 0, 1)" }}
         animate={{
           opacity: opacity(),

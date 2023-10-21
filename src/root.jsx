@@ -27,18 +27,17 @@ export default function Root() {
         <Link rel="icon" href="/favicon.ico" />
       </Head>
       <Body class="m0 bg-black color-white">
-        <Scrollbar>
-          <Header />
-
-          <Transition>
+        <Transition>
+          <Scrollbar>
+            <Header />
             <Suspense>
               <Routes>
                 <FileRoutes />
               </Routes>
             </Suspense>
             <Footer />
-          </Transition>
-        </Scrollbar>
+          </Scrollbar>
+        </Transition>
 
         <Scripts />
       </Body>

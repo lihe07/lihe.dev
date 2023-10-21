@@ -35,7 +35,7 @@ export default (props) => {
   );
 
   return (
-    <div class="w-full max-w-300 ma h-full py-10 color-emerald font-sans">
+    <div class="w-full max-w-300 ma h-full py-10 color-emerald font-sans leading-relaxed">
       <h1 class={"text-15 tracking-wider leading-15 " + style.fontPixel}>
         BASIC PROFILE
       </h1>
@@ -71,7 +71,7 @@ export default (props) => {
         <Line items={["platform", "account"]} />
         <SplitLine />
 
-        <Line items={["Twitter (X)", "123"]} />
+        <Line items={["Twitter (X)", "HeLi07784212"]} />
         <Line items={["Github", "lihe07"]} />
         <SplitLine />
       </div>

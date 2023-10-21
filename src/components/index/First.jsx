@@ -12,7 +12,7 @@ const Left = () => {
   return (
     <div>
       <p class="font-sans op-60 text-7 mt-0 mb-5">Hello!!</p>
-      <p class="font-serif md:text-13 text-10 mt-0 mr-5">
+      <p class="font-serif md:text-13 text-10 mt-0 mr-5 leading-snug">
         I'm <u class="underline-4">He Li</u>, a student and <br />
         Open Source + AI fan
       </p>

@@ -4726,10 +4726,10 @@ solid-start-netlify@^0.3.6:
     rollup "^3.26.2"
     terser "^5.19.0"
 
-solid-start-static@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.npmmirror.com/solid-start-static/-/solid-start-static-0.3.6.tgz#de0e104043e9b07227ff86e20b306b0b40560b83"
-  integrity sha512-lPZVtKKnrlBCxA8ndaTvkBCmqD4c++TMlGX73AjIjH0wacLLsIaIFQFdn7oZ0HPwzPaCEwXtAdSm6kkOmiwSLw==
+solid-start-static@^0.3.7:
+  version "0.3.7"
+  resolved "https://registry.npmmirror.com/solid-start-static/-/solid-start-static-0.3.7.tgz#3b198170f2562654946a2b3b1ca6f917aef43856"
+  integrity sha512-BTqjlq1sCSDJAWzBAqBRW+MUidQ1woEPtjrVElHCVRYb+lQV1QDaWVA8eaUUdraeWRDHcZkG5URx/u16uLIFFA==
   dependencies:
     "@rollup/plugin-commonjs" "^24.1.0"
     "@rollup/plugin-json" "^6.0.0"

@@ -5,6 +5,7 @@ import First from "@/components/index/First";
 import WhatIDo from "@/components/index/WhatIDo";
 import Wave from "@/components/index/Wave";
 import NextStop from "@/components/index/NextStop";
+import News from "@/components/index/News";
 
 export default function Home() {
 	return (
@@ -12,10 +13,10 @@ export default function Home() {
 			<Title>lihe.dev - Home Page</Title>
 			<Meta name="description" content="Home Page" />
 			<Meta name="keywords" content="Home Page" />
-
 			<First />
 			<BasicProfile />
 			<WhatIDo />
+			<News />
 			<Wave />
 		</main>
 	);

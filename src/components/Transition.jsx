@@ -9,6 +9,7 @@ export default function Transition(props) {
   const isRouting = useIsRouting();
   createEffect(() => {
     if (!isRouting()) {
+      console.log("Loaded");
       setTimeout(() => {
         setShow(true);
       }, 500);
@@ -24,9 +25,28 @@ export default function Transition(props) {
     }, 500);
   });
 
+  // let lastLocation;
+  // function watchLocation() {
+  //   if (lastLocation !== location.pathname) {
+  //     setShow(false);
+  //     lastLocation = location.pathname;
+  //   }
+  //
+  //   requestAnimationFrame(watchLocation);
+  // }
+  //
+  // onMount(() => {
+  //   watchLocation();
+  // });
+
   return (
-    <div class="op-0 transition-opacity-500" classList={{ "!op-100": show() }}>
-      {props.children}
+    <div class="overflow-clip w-full h-screen">
+      <div
+        class="op-0 transition-all-500 scale-105"
+        classList={{ "!op-100 !scale-100 ": show() }}
+      >
+        {props.children}
+      </div>
     </div>
   );
 }
