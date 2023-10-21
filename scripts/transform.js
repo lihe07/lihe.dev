@@ -11,7 +11,7 @@ function transform() {
   //   Clean up
   fs.rmSync(path.join(process.cwd(), "src", "blog.js"), { force: true });
   for (const file of fs.readdirSync(
-    path.join(process.cwd(), "src", "routes", "blog")
+    path.join(process.cwd(), "src", "routes", "blog"),
   )) {
     if (file.endsWith(".mdx"))
       fs.rmSync(path.join(process.cwd(), "src", "routes", "blog", file), {
@@ -31,7 +31,7 @@ function transform() {
     const codeBlock = fileContent.split("```yaml")[1].split("```")[0];
 
     const meta = parse(codeBlock);
-    const slug = file.split(".")[0];
+    const slug = file.split(".")[0].toLowerCase();
 
     blogMeta.push({
       ...meta,
@@ -46,7 +46,7 @@ function transform() {
       "src",
       "routes",
       "blog",
-      `${slug}.mdx`
+      `${slug}.mdx`,
     );
 
     fs.writeFileSync(newFilePath, fileContent);
@@ -54,7 +54,7 @@ function transform() {
 
   fs.writeFileSync(
     path.join(process.cwd(), "src", "blog.js"),
-    `export default ${JSON.stringify(blogMeta)}`
+    `export default ${JSON.stringify(blogMeta)}`,
   );
 }
 
