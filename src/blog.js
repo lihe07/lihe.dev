@@ -1,1 +1,1 @@
-export default [{"title":"Hello World","cover":"https://lms.d.zhan.com/zhanlms/addon_homework/2023/02/846314863eaf7ae27fe2/kvblurred.png","date":"2023-10-14","location":"Beijing","tags":["technologies"],"slug":"hello-world","href":"/blog/hello-world"}]
+export default [{"title":"Hello World","cover":"https://lms.d.zhan.com/zhanlms/addon_homework/2023/02/846314863eaf7ae27fe2/kvblurred.png","date":"2023-10-14","location":"Beijing","tags":[{"name":"Technologies","color":"#0ea5e9"}],"slug":"hello-world","href":"/blog/hello-world"}]

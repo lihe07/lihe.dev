@@ -7,6 +7,21 @@ import fs from "fs";
 import path from "path";
 import { parse } from "yaml";
 
+export const tags = {
+  technologies: {
+    name: "Technologies",
+    color: "#0ea5e9",
+  },
+  "quantum-chemistry": {
+    name: "Quantum Chemistry",
+    color: "#134e4a",
+  },
+  or: {
+    name: "Opearations Research",
+    color: "#6366f1",
+  },
+};
+
 function transform() {
   //   Clean up
   fs.rmSync(path.join(process.cwd(), "src", "blog.js"), { force: true });
@@ -37,6 +52,7 @@ function transform() {
       ...meta,
       slug,
       href: `/blog/${slug}`,
+      tags: meta.tags.map((name) => tags[name]),
     });
 
     fileContent = fileContent.replace("```yaml" + codeBlock + "```", "");

@@ -2,6 +2,7 @@ import Tag from "./Tag";
 import PageHead from "../PageHead";
 import "./markdown.css";
 import { BlogDescription } from "./BlogDescription";
+import { For } from "solid-js";
 
 /**
  * @typedef Tag
@@ -27,7 +28,9 @@ export default (props) => {
         <p class="op-70 text-xl font-sans">
           <BlogDescription {...props} />
         </p>
-        <div class="flex"></div>
+        <div class="flex">
+          <For each={props.tags}>{(e) => <Tag {...e} />}</For>
+        </div>
       </PageHead>
       <div class="px-10 my-10">
         <article class="markdown-body ma max-w-300 ">{props.children}</article>

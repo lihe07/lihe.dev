@@ -10,10 +10,6 @@ export function BlogLayout() {
 
   const meta = { ...blog.find((post) => post.href === location.pathname) };
 
-  if (meta.tags) meta.tags = meta.tags.map((tag) => tags[tag]).filter(Boolean);
-  else meta.tags = [];
-  console.log("blog", blog, meta);
-
   return (
     <main>
       <Title>{`lihe.dev - ${meta.title}`}</Title>
