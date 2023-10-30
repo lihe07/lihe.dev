@@ -12,6 +12,8 @@ import julia from "@/assets/icons/julia.png";
 import numpy from "@/assets/icons/numpy.svg";
 import rust from "@/assets/icons/rust.png";
 
+import phenyl from "@/assets/images/phenyl.png";
+
 const icons = [
 	{
 		icon: svelte,
@@ -122,9 +124,7 @@ export default () => {
 										tagClass="bg-sky-9"
 									/>
 									<TagCard
-										cover={
-											<CoverImage src="http://www.iqmol.org/images/phenyl.png" />
-										}
+										cover={<CoverImage src={phenyl} />}
 										text="Learn and Apply"
 										tagName="Quantum Chemistry"
 										tagClass="bg-teal-9"
