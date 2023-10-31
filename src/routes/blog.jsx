@@ -5,10 +5,13 @@ import { useLocation } from "solid-start";
 
 export default function Blog() {
 	const location = useLocation();
-	console.log(location.pathname);
+	console.log(JSON.stringify(location.pathname));
 
 	return (
-		<Show when={location.pathname !== "/blog"} fallback={<Outlet />}>
+		<Show
+			when={location.pathname !== "/blog" && location.pathname !== "/blog/"}
+			fallback={<Outlet />}
+		>
 			<BlogLayout />
 		</Show>
 	);

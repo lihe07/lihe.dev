@@ -44,7 +44,7 @@ export default () => {
 			{/* <ProgressBar /> */}
 
 			{/* Main */}
-			<div class="max-w-300 w-full ma flex justify-between items-center">
+			<div class="max-w-300 w-full ma flex justify-between items-center select-none">
 				<div class="flex items-center">
 					<img src={avatar} alt="Avatar" class="w-10 h-10 rounded-50%" />
 					<A

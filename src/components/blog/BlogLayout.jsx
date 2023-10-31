@@ -8,7 +8,13 @@ import { Title } from "solid-start";
 export function BlogLayout() {
   const location = useLocation();
 
-  const meta = { ...blog.find((post) => post.href === location.pathname) };
+  const meta = {
+    ...blog.find(
+      (post) =>
+        post.href === location.pathname ||
+        `${post.href}/` === location.pathname,
+    ),
+  };
 
   return (
     <main>

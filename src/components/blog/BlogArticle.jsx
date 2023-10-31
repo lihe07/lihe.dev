@@ -20,8 +20,6 @@ import { For } from "solid-js";
  * @param {Props} props
  */
 export default (props) => {
-  console.log("tags", props.tags);
-
   return (
     <>
       <PageHead title={props.title} cover={props.cover}>
@@ -29,7 +27,7 @@ export default (props) => {
           <BlogDescription {...props} />
         </p>
         <div class="flex">
-          <For each={props.tags}>{(e) => <Tag {...e} />}</For>
+          <For each={props.tags || []}>{(e) => <Tag {...e} />}</For>
         </div>
       </PageHead>
       <div class="px-10 my-10">

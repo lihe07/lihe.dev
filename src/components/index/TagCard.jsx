@@ -1,3 +1,5 @@
+import { A } from "solid-start";
+
 export default (props) => {
   return (
     <div class="bg-true-gray-8  p-5 rounded-xl text-center">
@@ -6,15 +8,15 @@ export default (props) => {
       </div>
 
       <p class="text-center font-mono mt-3 mb-2 text-lg">{props.text}</p>
-      <a
-        href="/whatever"
+      <A
+        href="/blog"
         class={
           "rounded-lg px-2 py-1 color-white decoration-none text-lg font-mono " +
           props.tagClass
         }
       >
         {props.tagName}
-      </a>
+      </A>
     </div>
   );
 };

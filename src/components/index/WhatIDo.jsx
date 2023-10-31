@@ -122,6 +122,7 @@ export default () => {
 										text="Explore Latest"
 										tagName="Technolonies"
 										tagClass="bg-sky-9"
+										id="technolonies"
 									/>
 									<TagCard
 										cover={<CoverImage src={phenyl} />}
