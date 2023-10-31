@@ -6,80 +6,68 @@
 import fs from "fs";
 import path from "path";
 import { parse } from "yaml";
-
-export const tags = {
-  technologies: {
-    name: "Technologies",
-    color: "#0ea5e9",
-  },
-  "quantum-chemistry": {
-    name: "Quantum Chemistry",
-    color: "#134e4a",
-  },
-  or: {
-    name: "Opearations Research",
-    color: "#6366f1",
-  },
-};
+import tags from "../src/tags.js";
 
 function transform() {
-  //   Clean up
-  fs.rmSync(path.join(process.cwd(), "src", "blog.js"), { force: true });
-  for (const file of fs.readdirSync(
-    path.join(process.cwd(), "src", "routes", "blog"),
-  )) {
-    if (file.endsWith(".mdx"))
-      fs.rmSync(path.join(process.cwd(), "src", "routes", "blog", file), {
-        force: true,
-      });
-  }
+	//   Clean up
+	fs.rmSync(path.join(process.cwd(), "src", "blog.js"), { force: true });
+	for (const file of fs.readdirSync(
+		path.join(process.cwd(), "src", "routes", "blog"),
+	)) {
+		if (file.endsWith(".mdx"))
+			fs.rmSync(path.join(process.cwd(), "src", "routes", "blog", file), {
+				force: true,
+			});
+	}
 
-  const blogDir = path.join(process.cwd(), "blog");
-  const blogFiles = fs.readdirSync(blogDir);
+	const blogDir = path.join(process.cwd(), "blog");
+	const blogFiles = fs.readdirSync(blogDir);
 
-  const blogMeta = [];
+	const blogMeta = [];
 
-  for (const file of blogFiles) {
-    const filePath = path.join(blogDir, file);
-    let fileContent = fs.readFileSync(filePath).toString();
-    // Get the first code block
-    const codeBlock = fileContent.split("```yaml")[1].split("```")[0];
+	for (const file of blogFiles) {
+		const filePath = path.join(blogDir, file);
+		let fileContent = fs.readFileSync(filePath).toString();
+		// Get the first code block
+		const codeBlock = fileContent.split("```yaml")[1].split("```")[0];
 
-    const meta = parse(codeBlock);
-    const slug = file.split(".")[0].toLowerCase();
+		const meta = parse(codeBlock);
+		const slug = file.split(".")[0].toLowerCase();
 
-    blogMeta.push({
-      ...meta,
-      slug,
-      href: `/blog/${slug}`,
-      tags: meta.tags.map((name) => tags[name]),
-    });
+		blogMeta.push({
+			...meta,
+			slug,
+			href: `/blog/${slug}`,
+			tags: meta.tags.map((name) => tags[name]),
+		});
 
-    fileContent = fileContent.replace("```yaml" + codeBlock + "```", "");
+		fileContent = fileContent.replace("```yaml" + codeBlock + "```", "");
 
-    const newFilePath = path.join(
-      process.cwd(),
-      "src",
-      "routes",
-      "blog",
-      `${slug}.mdx`,
-    );
+		const newFilePath = path.join(
+			process.cwd(),
+			"src",
+			"routes",
+			"blog",
+			`${slug}.mdx`,
+		);
 
-    fs.writeFileSync(newFilePath, fileContent);
-  }
+		fs.writeFileSync(newFilePath, fileContent);
+	}
 
-  fs.writeFileSync(
-    path.join(process.cwd(), "src", "blog.js"),
-    `export default ${JSON.stringify(blogMeta)}`,
-  );
+	fs.writeFileSync(
+		path.join(process.cwd(), "src", "blog.js"),
+		`export default ${JSON.stringify(blogMeta)}`,
+	);
 }
 
 export default () => {
-  return {
-    name: "transform",
+	return {
+		name: "transform",
 
-    options() {
-      transform();
-    },
-  };
+		options() {
+			transform();
+		},
+	};
 };
+
+transform();

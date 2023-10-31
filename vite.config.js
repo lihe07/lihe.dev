@@ -1,10 +1,8 @@
 import solid from "solid-start/vite";
-import netlify from "solid-start-netlify";
 import staticAdapter from "solid-start-static";
 import unocss from "unocss/vite";
 import { defineConfig } from "vite";
 import replaceMath from "./scripts/replaceMath";
-import transform from "./scripts/transform";
 
 export default defineConfig({
 	server: {
@@ -17,7 +15,7 @@ export default defineConfig({
 		},
 	},
 	plugins: [
-		transform(),
+		// transform(),
 		replaceMath(),
 		{
 			...(await import("@mdx-js/rollup")).default({
