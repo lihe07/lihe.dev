@@ -21,6 +21,3 @@ gitignore
 .DS_Store
 Thumbs.db
 
-# Locks
-yarn.lock
-bun.lockb
