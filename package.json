@@ -16,6 +16,7 @@
 		"@solidjs/router": "^0.10.9",
 		"@solidjs/start": "^0.4.9",
 		"@vinxi/plugin-mdx": "^3.6.7",
+		"blaze-slider": "^1.9.3",
 		"katex": "^0.16.9",
 		"patch-package": "^8.0.0",
 		"prettier": "^3.2.1",
