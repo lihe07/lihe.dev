@@ -1,7 +1,7 @@
 // This is the index page
 
 import { For } from "solid-js";
-import { useNavigate } from "@solidjs/router";
+import { A, useNavigate } from "@solidjs/router";
 import { Title } from "@solidjs/meta";
 import Section from "~/components/Section";
 import PageHead from "~/components/PageHead";
@@ -23,7 +23,8 @@ function Blog(props) {
 				class="rounded-2xl md:h-60 h-50 md:w-40% w-full"
 			/>
 			<div class="py-7 flex flex-col justify-center md:w-60% w-full px-7 box-border">
-				<h2 class="text-2xl mt-0 leading-relaxed">{props.title}</h2>
+				<h2 class="text-2xl mt-0 leading-relaxed">
+					<A href={props.href} class="color-white decoration-none">{props.title}</A></h2>
 
 				<div class="flex">
 					<For each={props.tags}>{(e) => <Tag hover={false} {...e} />}</For>

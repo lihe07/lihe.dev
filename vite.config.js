@@ -6,11 +6,11 @@ const { default: mdx } = pkg;
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import rehypeHighlight from 'rehype-highlight'
-import replaceMath from "./scripts/replaceMath.js";
 
 export default defineConfig({
 	start: {
 		extensions: ["mdx", "md"],
+
 	},
 	plugins: [
 		unocss(),
@@ -22,4 +22,5 @@ export default defineConfig({
 			remarkPlugins: [remarkMath],
 		}),
 	],
+
 });

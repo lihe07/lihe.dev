@@ -26,6 +26,8 @@ function transform() {
 	const blogMeta = [];
 
 	for (const file of blogFiles) {
+		if (!file.endsWith("md")) continue
+
 		const filePath = path.join(blogDir, file);
 		let fileContent = fs.readFileSync(filePath).toString();
 		// Get the first code block
