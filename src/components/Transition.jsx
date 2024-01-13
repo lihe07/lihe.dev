@@ -1,7 +1,6 @@
-import { Motion } from "@motionone/solid";
 import { useBeforeLeave } from "@solidjs/router";
 import { createEffect, createSignal } from "solid-js";
-import { useIsRouting } from "solid-start";
+import { useIsRouting } from "@solidjs/router";
 
 export default function Transition(props) {
   const [show, setShow] = createSignal(false);

@@ -1,5 +1,5 @@
-import PageHead from "@/components/PageHead";
-import { Title } from "solid-start";
+import PageHead from "~/components/PageHead";
+import { Title } from "@solidjs/meta";
 
 export default () => {
 	return (

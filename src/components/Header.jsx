@@ -1,7 +1,7 @@
-import { createEffect, createSignal, For, on, onMount } from "solid-js";
-import { A, useLocation } from "solid-start";
+import { createSignal, For, onMount } from "solid-js";
+import { A, useLocation } from "@solidjs/router";
 
-import avatar from "@/assets/images/avatar.50x50.webp";
+import avatar from "~/assets/images/avatar.50x50.webp";
 
 const routes = [
 	{

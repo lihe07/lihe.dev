@@ -1,35 +1,25 @@
-import solid from "solid-start/vite";
-import staticAdapter from "solid-start-static";
+import { defineConfig } from "@solidjs/start/config";
 import unocss from "unocss/vite";
-import { defineConfig } from "vite";
-import replaceMath from "./scripts/replaceMath";
+/* @ts-ignore */
+import pkg from "@vinxi/plugin-mdx";
+const { default: mdx } = pkg;
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
+import rehypeHighlight from 'rehype-highlight'
+import replaceMath from "./scripts/replaceMath.js";
 
 export default defineConfig({
-	server: {
-		port: 3000,
-		host: "127.0.0.1",
-	},
-	resolve: {
-		alias: {
-			"@": "/src",
-		},
+	start: {
+		extensions: ["mdx", "md"],
 	},
 	plugins: [
-		// transform(),
-		replaceMath(),
-		{
-			...(await import("@mdx-js/rollup")).default({
-				jsx: true,
-				jsxImportSource: "solid-js",
-				providerImportSource: "solid-mdx",
-			}),
-			enforce: "pre",
-		},
-		solid({
-			// adapter: netlify({ edge: true }),
-			adapter: staticAdapter(),
-			extensions: [".md", ".mdx"],
-		}),
 		unocss(),
+		mdx.withImports({})({
+			jsx: true,
+			jsxImportSource: "solid-js",
+			providerImportSource: "solid-mdx",
+			rehypePlugins: [rehypeHighlight, () => rehypeKatex({ output: "html" })],
+			remarkPlugins: [remarkMath],
+		}),
 	],
 });

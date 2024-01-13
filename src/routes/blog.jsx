@@ -1,18 +1,21 @@
-import { BlogLayout } from "@/components/blog/BlogLayout";
-import { Outlet } from "@solidjs/router";
-import { Show } from "solid-js";
-import { useLocation } from "solid-start";
+// This controls the layout of blog page
 
-export default function Blog() {
+import { BlogLayout } from "~/components/blog/BlogLayout";
+import { Show } from "solid-js";
+import { useLocation } from "@solidjs/router";
+
+export default function Blog(props) {
 	const location = useLocation();
 	console.log(JSON.stringify(location.pathname));
 
 	return (
 		<Show
 			when={location.pathname !== "/blog" && location.pathname !== "/blog/"}
-			fallback={<Outlet />}
+			fallback={props.children}
 		>
-			<BlogLayout />
+			<BlogLayout>
+				{props.children}
+			</BlogLayout>
 		</Show>
 	);
 }

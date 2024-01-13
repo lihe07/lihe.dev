@@ -1,18 +1,18 @@
-import BlazeSlider from "@/assets/scripts/BlazeSlider";
+import BlazeSlider from "~/assets/scripts/BlazeSlider";
 import "blaze-slider/dist/blaze.css";
 import TagCard from "./TagCard";
 import { For, onMount } from "solid-js";
 import Section from "../Section";
 import Math from "../blog/Math";
 
-import svelte from "@/assets/icons/svelte.png";
-import solid from "@/assets/icons/solid.svg";
-import pytorch from "@/assets/icons/pytorch.png";
-import julia from "@/assets/icons/julia.png";
-import numpy from "@/assets/icons/numpy.svg";
-import rust from "@/assets/icons/rust.png";
+import svelte from "~/assets/icons/svelte.png";
+import solid from "~/assets/icons/solid.svg";
+import pytorch from "~/assets/icons/pytorch.png";
+import julia from "~/assets/icons/julia.png";
+import numpy from "~/assets/icons/numpy.svg";
+import rust from "~/assets/icons/rust.png";
 
-import phenyl from "@/assets/images/phenyl.png";
+import phenyl from "~/assets/images/phenyl.png";
 
 const icons = [
 	{

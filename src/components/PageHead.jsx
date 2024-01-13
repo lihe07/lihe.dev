@@ -1,4 +1,4 @@
-import defaultCover from "@/assets/images/cover.webp";
+import defaultCover from "~/assets/images/cover.webp";
 import Section from "./Section";
 import { Show } from "solid-js";
 import style from "./PageHead.module.css";

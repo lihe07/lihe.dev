@@ -1,11 +1,13 @@
 import BlogArticle from "./BlogArticle";
-import { Outlet, useLocation } from "@solidjs/router";
+import { useLocation } from "@solidjs/router";
 
-import blog from "@/blog";
-import { tags } from "@/config";
-import { Title } from "solid-start";
+import "~/assets/styles/highlight.min.css"
+import "~/assets/styles/katex.min.css"
+import blog from "~/blog";
+import { tags } from "~/config";
+import { Title } from "@solidjs/meta";
 
-export function BlogLayout() {
+export function BlogLayout(props) {
   const location = useLocation();
 
   const meta = {
@@ -20,7 +22,7 @@ export function BlogLayout() {
     <main>
       <Title>{`lihe.dev - ${meta.title}`}</Title>
       <BlogArticle cover="" {...meta}>
-        <Outlet />
+        {props.children}
       </BlogArticle>
     </main>
   );

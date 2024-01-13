@@ -15,6 +15,7 @@ This is a test page for my personal blog
 Inline math $1+1=2$
 
 Block
+
 $$
 \int x dx = \frac{x^2}2 +C
 $$

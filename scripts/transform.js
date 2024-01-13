@@ -54,6 +54,8 @@ function transform() {
 		fs.writeFileSync(newFilePath, fileContent);
 	}
 
+
+	// Write metadata
 	fs.writeFileSync(
 		path.join(process.cwd(), "src", "blog.js"),
 		`export default ${JSON.stringify(blogMeta)}`,

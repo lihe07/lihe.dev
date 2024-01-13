@@ -1,6 +1,6 @@
 import { createEffect, createSignal, Show } from "solid-js";
 import { Motion } from "@motionone/solid";
-import { useIsRouting } from "solid-start";
+import { useIsRouting } from "@solidjs/start";
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

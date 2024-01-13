@@ -1,11 +1,11 @@
 import { For, onMount } from "solid-js";
-import { useNavigate } from "solid-start";
+import { useNavigate } from "@solidjs/router";
 
 import Button from "./Button";
 import style from "./First.module.css";
 
-import bg from "../../assets/images/bg.webp";
-import { socials } from "../../config";
+import bg from "~/assets/images/bg.webp";
+import { socials } from "~/config";
 
 const Left = () => {
   const navigate = useNavigate();
