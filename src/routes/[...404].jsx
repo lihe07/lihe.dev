@@ -7,7 +7,7 @@ export default () => {
 			<Title>lihe.dev - Not Found</Title>
 			<PageHead
 				title="Nothing here"
-				description="This site might be under construction for a long while. Sorry for that!"
+				description="This site might be under construction for a long while. Check back later!"
 			/>
 		</main>
 	);

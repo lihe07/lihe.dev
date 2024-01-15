@@ -6,7 +6,7 @@ export default () => {
     <main>
       <Title>lihe.dev - Contact</Title>
       <PageHead
-        title="Connect with me"
+        title="Get in Touch"
         description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
       />
     </main>
