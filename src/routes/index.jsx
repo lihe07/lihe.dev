@@ -18,9 +18,7 @@ export default function Home() {
       <WhatIDo />
       <News />
 
-      <div class="mt--50" />
-
-      <Wave />
+      <Wave class="bg-sky-9" />
     </main>
   );
 }

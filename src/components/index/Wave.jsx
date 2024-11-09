@@ -1,6 +1,6 @@
 import style from "./Wave.module.css";
 
-export default function Wave() {
+export default function Wave(props) {
   function anim(ele, _duration) {
     const duration = _duration();
 
@@ -15,7 +15,7 @@ export default function Wave() {
   }
 
   return (
-    <div class="relative w-full">
+    <div class={"relative w-full " + props.class || ""}>
       <svg viewBox="0 400 960 120" role="presentation" class={style.svg}>
         <path
           d="M0 450L22.8 447.3C45.7 444.7 91.3 439.3 137 435.7C182.7 432 228.3 430 274 428.3C319.7 426.7 365.3 425.3 411.2 427C457 428.7 503 433.3 548.8 438.8C594.7 444.3 640.3 450.7 686 448.2C731.7 445.7 777.3 434.3 823 430.2C868.7 426 914.3 429 937.2 430.5L960 432L960 541L937.2 541C914.3 541 868.7 541 823 541C777.3 541 731.7 541 686 541C640.3 541 594.7 541 548.8 541C503 541 457 541 411.2 541C365.3 541 319.7 541 274 541C228.3 541 182.7 541 137 541C91.3 541 45.7 541 22.8 541L0 541Z"
