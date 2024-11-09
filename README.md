@@ -1,8 +1,8 @@
 # [lihe.dev](https://www.lihe.dev)
 
-Made with SolidStart. WIP
+My experimental homepage. Made with SolidStart v1. 
 
-Updated to SolidStart Beta Phrase 2.
+Work-In-Progress :construction:
 
 Markdown support by `mdx`. Inline math support by `remark-math` and `rehype-katex`.
 

@@ -103,12 +103,16 @@
   top: -0.5em;
 }
 
-.markdown-body img {
+.markdown-body img, video {
   border-style: none;
-  max-width: 100%;
+  /*max-width: 100%;*/
+  max-width: 50rem;
+  margin: 2rem auto;
+  display: block;
   box-sizing: content-box;
   background-color: #0d1117;
 }
+
 
 .markdown-body code,
 .markdown-body kbd,
