@@ -8,16 +8,19 @@ import NextStop from "~/components/index/NextStop";
 import News from "~/components/index/News";
 
 export default function Home() {
-	return (
-		<main>
-			<Title>lihe.dev - Home Page</Title>
-			<Meta name="description" content="Home Page" />
-			<Meta name="keywords" content="Home Page" />
-			<First />
-			<BasicProfile />
-			<WhatIDo />
-			<News />
-			<Wave />
-		</main>
-	);
+  return (
+    <main>
+      <Title>lihe.dev - Home Page</Title>
+      <Meta name="description" content="Home Page" />
+      <Meta name="keywords" content="Home Page" />
+      <First />
+      {/* <BasicProfile /> */}
+      <WhatIDo />
+      <News />
+
+      <div class="mt--50" />
+
+      <Wave />
+    </main>
+  );
 }
