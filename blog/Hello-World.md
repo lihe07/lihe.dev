@@ -1,6 +1,6 @@
 ```yaml
 title: Hello World
-cover: https://lms.d.zhan.com/zhanlms/addon_homework/2023/02/846314863eaf7ae27fe2/kvblurred.png
+cover: https://lms.d.zhan.com/zhanlms/addon_homework/2024/11/1688396730b4a059ec3/kvblurred.webp
 date: 2023-10-14
 location: Beijing
 tags: [other]

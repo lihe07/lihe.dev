@@ -1,7 +1,7 @@
 import { createSignal, For } from "solid-js";
 import { A, useLocation, useNavigate } from "@solidjs/router";
 
-import avatar from "~/assets/images/avatar.50x50.webp";
+import avatar from "~/assets/images/avatar.115x115.webp";
 
 const routes = [
   {

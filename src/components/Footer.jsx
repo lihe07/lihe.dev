@@ -1,7 +1,7 @@
 import { For } from "solid-js";
 import { footerLinks, socials } from "../config";
 import Section from "./Section";
-import avatar from "~/assets/images/avatar.460x460.webp";
+import avatar from "~/assets/images/avatar.115x115.webp";
 import { A } from "@solidjs/router";
 
 function Card(props) {

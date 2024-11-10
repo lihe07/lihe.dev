@@ -15,7 +15,7 @@ import julia from "~/assets/icons/julia.png";
 import numpy from "~/assets/icons/numpy.svg";
 import rust from "~/assets/icons/rust.png";
 
-import phenyl from "~/assets/images/phenyl.png";
+import phenyl from "~/assets/images/phenyl.webp";
 
 const icons = [
   {
@@ -240,11 +240,15 @@ export default () => {
               </div>
 
               <div class="flex items-center justify-center mt-10 gap-4">
-                <button class="blaze-prev color-white op-70 hover:op-100 active:scale-90 transition">
+                <button class="blaze-prev color-white op-70 hover:op-100 active:scale-90 transition"
+                  aria-label="Previous"
+                >
                   <div class="i-fluent-chevron-left-24-filled w-8 h-8"></div>
                 </button>
                 <div class="blaze-pagination"></div>
-                <button class="blaze-next color-white op-70 hover:op-100 active:scale-90 transition">
+                <button class="blaze-next color-white op-70 hover:op-100 active:scale-90 transition"
+                  aria-label="Next"
+                >
                   <div class="i-fluent-chevron-right-24-filled w-8 h-8"></div>
                 </button>
               </div>
