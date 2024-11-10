@@ -17,7 +17,7 @@ export default function Root() {
     <Router
       root={(props) => (
         <MetaProvider>
-          <Scrollbar>
+          <Scrollbar isDuringTransition={isDuringTransition()}>
             <Header isDuringTransition={isDuringTransition()} />
             <Transition onTransition={setIsDuringTransition}>
               <Suspense>{props.children}</Suspense>

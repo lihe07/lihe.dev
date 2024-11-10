@@ -19,7 +19,7 @@ export default (props) => {
   });
 
   return (
-    <div class={"w-full h-screen relative"}>
+    <div class="w-full h-screen relative">
       <div
         class={"w-full h-screen overflow-scroll relative " + style.hide}
         id="scroll"
@@ -29,7 +29,10 @@ export default (props) => {
       </div>
 
       <div
-        class="absolute w-2 right-0 bg-white bg-op-40 rounded-b-5 top-0"
+        class="absolute w-2 right-0 bg-white bg-op-40 rounded-b-5 top-0 transition"
+        classList={{
+          "op-0": props.isDuringTransition,
+        }}
         style={{
           height: `${percent()}%`,
         }}
