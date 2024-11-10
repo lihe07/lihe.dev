@@ -12,7 +12,7 @@ export default createHandler(() => (
           {/* <script defer data-domain="lihe.dev" src="https://anna.bwrrc.org.cn/js/script.js"></script> */}
           {assets}
         </head>
-        <body class="m0 bg-dark-9 color-white">
+        <body style="background: #0f0f0f; margin: 0; color: white;">
           <div id="app">{children}</div>
           {scripts}
         </body>

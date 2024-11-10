@@ -3,12 +3,12 @@ import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
 
-import "uno.css";
+import 'virtual:uno.css'
 import Scrollbar from "./components/Scrollbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Transition from "./components/Transition";
-import { MetaProvider, Title } from "@solidjs/meta";
+import { MetaProvider } from "@solidjs/meta";
 
 export default function Root() {
   return (
