@@ -1,4 +1,5 @@
 import { A } from "@solidjs/router";
+import Tag from "../blog/Tag";
 
 export default (props) => {
   return (
@@ -8,15 +9,8 @@ export default (props) => {
       </div>
 
       <p class="text-center ma font-sans w-70% my-3 text-lg">{props.text}</p>
-      <A
-        href="/blog"
-        class={
-          "rounded-lg px-2 py-1 color-white decoration-none text-lg font-mono " +
-          props.tagClass
-        }
-      >
-        {props.tagName}
-      </A>
+
+      <Tag id={props.tag} class="!inline" />
     </div>
   );
 };

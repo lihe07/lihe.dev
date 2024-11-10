@@ -201,32 +201,27 @@ export default () => {
                   <TagCard
                     cover={<SigmoidSTE />}
                     text="Artificial Intelligence and Deep Learning"
-                    tagName="ai"
-                    tagClass="bg-zinc-9"
+                    tag="ai"
                   />
                   <TagCard
                     cover={<Binary />}
                     text="Reverse Engineering and Security"
-                    tagName="re"
-                    tagClass="bg-zinc-9"
+                    tag="re"
                   />
                   <TagCard
                     cover={<Icons />}
                     text="Programming and Latest Technologies"
-                    tagName="tech"
-                    tagClass="bg-sky-9"
+                    tag="tech"
                   />
                   <TagCard
                     cover={<CoverImage src={phenyl} />}
                     text="Quantum and Computational Chemistry"
-                    tagName="chem"
-                    tagClass="bg-teal-9"
+                    tag="chem"
                   />
                   <TagCard
                     cover={<MathProg />}
                     text="Operational Research and Optimization"
-                    tagName="opt"
-                    tagClass="bg-teal-9"
+                    tag="opt"
                   />
                 </div>
               </div>

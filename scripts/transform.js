@@ -6,7 +6,7 @@
 import fs from "fs";
 import path from "path";
 import { parse } from "yaml";
-import tags from "../src/tags.js";
+// import tags from "../src/tags.js";
 
 function transform() {
   //   Clean up
@@ -40,7 +40,8 @@ function transform() {
       ...meta,
       slug,
       href: `/blog/${slug}`,
-      tags: meta.tags.map((name) => tags[name]),
+      // tags: meta.tags.map((name) => tags[name]),
+      tags: meta.tags,
     });
 
     fileContent = fileContent.replace("```yaml" + codeBlock + "```", "");

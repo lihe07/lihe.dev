@@ -2,7 +2,7 @@ import Tag from "./Tag";
 import PageHead from "../PageHead";
 import "./markdown.css";
 import { BlogDescription } from "./BlogDescription";
-import { For, onMount } from "solid-js";
+import { For } from "solid-js";
 
 function parseStyleString(inputString) {
   const keyValuePairs = inputString.split(';');
@@ -61,7 +61,7 @@ export default (props) => {
           <BlogDescription {...props} />
         </p>
         <div class="flex">
-          <For each={props.tags || []}>{(e) => <Tag {...e} />}</For>
+          <For each={props.tags || []}>{(e) => <Tag id={e} />}</For>
         </div>
       </PageHead>
       <div class="px-10 my-10">

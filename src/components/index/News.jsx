@@ -10,7 +10,7 @@ export default function News() {
         <h1 class="md:text-15 text-10 flex justify-between md:flex-row flex-col">
           Recent Updates
 
-          <A href="/blog" class="!text-sky-1 text-6 mt-3 decoration-none op-70 hover:op-100 active:scale-98 transition flex items-center">
+          <A href="/blog" class="!text-sky-1 text-6 mt-3 decoration-none op-70 hover:op-100 active:scale-95 transition flex items-center">
             View all posts
 
             <div class="i-mdi-arrow-right ml-2 mt-1"></div>
