@@ -103,7 +103,8 @@
   top: -0.5em;
 }
 
-.markdown-body img, video {
+.markdown-body img,
+video {
   border-style: none;
   max-width: 100%;
   width: 50rem;
@@ -112,7 +113,6 @@
   box-sizing: content-box;
   background-color: #0d1117;
 }
-
 
 .markdown-body code,
 .markdown-body kbd,
@@ -237,8 +237,14 @@
 .markdown-body kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-    Liberation Mono, monospace;
+  font:
+    11px ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
   line-height: 10px;
   color: #c9d1d9;
   vertical-align: middle;
@@ -326,16 +332,28 @@
 
 .markdown-body tt,
 .markdown-body code {
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-    Liberation Mono, monospace;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
   font-size: 12px;
 }
 
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-    Liberation Mono, monospace;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
   font-size: 12px;
   word-wrap: normal;
 }

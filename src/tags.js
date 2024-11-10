@@ -13,11 +13,11 @@ export default {
   },
   ai: {
     name: "AI",
-    color: "#0f766e" // teal-7
+    color: "#0f766e", // teal-7
   },
   re: {
     name: "RE",
-    color: "#be123c" // rose-7
+    color: "#be123c", // rose-7
   },
   other: {
     name: "other",

@@ -3,9 +3,9 @@ import pkg from "@vinxi/plugin-mdx";
 
 import unocss from "unocss/vite";
 
-import rehypeKatex from 'rehype-katex'
-import remarkMath from 'remark-math'
-import rehypeHighlight from 'rehype-highlight'
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
+import rehypeHighlight from "rehype-highlight";
 
 const { default: mdx } = pkg;
 export default defineConfig({
@@ -19,7 +19,7 @@ export default defineConfig({
         providerImportSource: "solid-mdx",
         rehypePlugins: [rehypeHighlight, () => rehypeKatex({ output: "html" })],
         remarkPlugins: [remarkMath],
-      })
-    ]
-  }
+      }),
+    ],
+  },
 });

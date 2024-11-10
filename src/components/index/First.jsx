@@ -93,9 +93,7 @@ const Right = () => {
 };
 export default () => {
   return (
-    <section
-      class="h-screen w-full relative"
-    >
+    <section class="h-screen w-full relative">
       <div
         class="absolute top-0 bottom-0 left-0 right-0 bg-center bg-cover
         animate-pulse
@@ -104,8 +102,7 @@ export default () => {
         animate-delay-1000
         "
         style={{ "background-image": `url(${bg})` }}
-      >
-      </div>
+      ></div>
       <div class="h-full w-full backdrop-blur bg-black bg-op-50 flex items-center px-10 box-border">
         <div class="max-w-300 ma w-full flex justify-between">
           {/* Left */}

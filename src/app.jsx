@@ -3,7 +3,7 @@ import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { createSignal, Suspense } from "solid-js";
 
-import 'virtual:uno.css'
+import "virtual:uno.css";
 import Scrollbar from "./components/Scrollbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -20,9 +20,7 @@ export default function Root() {
           <Scrollbar>
             <Header isDuringTransition={isDuringTransition()} />
             <Transition onTransition={setIsDuringTransition}>
-              <Suspense>
-                {props.children}
-              </Suspense>
+              <Suspense>{props.children}</Suspense>
               <Footer />
             </Transition>
           </Scrollbar>

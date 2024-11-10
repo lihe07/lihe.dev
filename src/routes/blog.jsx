@@ -12,9 +12,7 @@ export default function Blog(props) {
       when={location.pathname !== "/blog" && location.pathname !== "/blog/"}
       fallback={props.children}
     >
-      <BlogLayout>
-        {props.children}
-      </BlogLayout>
+      <BlogLayout>{props.children}</BlogLayout>
     </Show>
   );
 }

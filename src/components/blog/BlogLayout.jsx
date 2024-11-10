@@ -1,8 +1,8 @@
 import BlogArticle from "./BlogArticle";
 import { useLocation } from "@solidjs/router";
 
-import "~/assets/styles/highlight.min.css"
-import "~/assets/styles/katex.min.css"
+import "~/assets/styles/highlight.min.css";
+import "~/assets/styles/katex.min.css";
 import blog from "~/blog";
 import { tags } from "~/config";
 import { Title } from "@solidjs/meta";

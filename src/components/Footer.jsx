@@ -30,11 +30,15 @@ function Profile() {
   return (
     <div>
       <div class="flex gap-5 items-center">
-        <img src={avatar} class="md:w-18 md:h-18 h-15 w-15 rounded-1/2" />
+        <img
+          src={avatar}
+          alt="Avatar"
+          class="md:w-18 md:h-18 h-15 w-15 rounded-1/2"
+        />
         <h2 class="font-sans md:text-2xl text-xl">He Li @ lihe.dev</h2>
       </div>
       <p class="op-70 font-sans leading-loose text-lg mb-0">
-        Made with {" "}
+        Made with{" "}
         <a
           href="https://start.solidjs.com/"
           class="color-white"
@@ -43,11 +47,7 @@ function Profile() {
           SolidStart
         </a>
         {" and "}
-        <a
-          href="https://unocss.dev/"
-          class="color-white"
-          target="_blank"
-        >
+        <a href="https://unocss.dev/" class="color-white" target="_blank">
           UnoCSS
         </a>
         <br />

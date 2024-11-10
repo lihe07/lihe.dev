@@ -1,6 +1,6 @@
 .svg {
   overflow: hidden;
-  transform: translateY(10%)
+  transform: translateY(10%);
 }
 
 @media (max-width: 768px) {

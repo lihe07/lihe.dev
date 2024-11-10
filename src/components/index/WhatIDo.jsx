@@ -110,36 +110,44 @@ function Binary() {
     return <span class="text-yellow-400">{props.children}</span>;
   }
 
-
   const [mouseOver, setMouseOver] = createSignal(false);
 
   return (
-    <div class="h-full overflow-hidden relative text-left"
+    <div
+      class="h-full overflow-hidden relative text-left"
       onMouseOver={() => setMouseOver(true)}
       onMouseOut={() => setMouseOver(false)}
     >
-      <code class="font-mono text-md op-80 transition"
+      <code
+        class="font-mono text-md op-80 transition"
         classList={{
           "!op-10": mouseOver(),
         }}
       >
-        <R>7f</R><G>45 4c46</G> <R>0201 01</R>00 0000 0000 0000 0000
-        <R> 03</R>00 <G>3e</G>00 <R>01</R>00 0000 <R>e0</R><G>23</G> 0000 0000 0000
-        <G> 40</G>00 0000 0000 0000 <G>6071</G> 0000 0000 0000
-        0000 0000 <G>40</G>00 <G>38</G>00 <Y>0d</Y>00 <G>40</G>00 <R>1c</R>00 <R>1b</R>00
+        <R>7f</R>
+        <G>45 4c46</G> <R>0201 01</R>00 0000 0000 0000 0000
+        <R> 03</R>00 <G>3e</G>00 <R>01</R>00 0000 <R>e0</R>
+        <G>23</G> 0000 0000 0000
+        <G> 40</G>00 0000 0000 0000 <G>6071</G> 0000 0000 0000 0000 0000{" "}
+        <G>40</G>00 <G>38</G>00 <Y>0d</Y>00 <G>40</G>00 <R>1c</R>00 <R>1b</R>00
         <R> 06</R>00 0000 <R>04</R>00 0000 <G>40</G>00 0000 0000 0000
         <G> 40</G>00 0000 0000 0000 <G>40</G>00 0000 0000 0000
         <R> d802</R> 0000 0000 0000 <R>d802</R> 0000 0000 0000
         <R> 08</R>00 0000 0000 0000 <R> 03</R>00 0000 <R>04</R>00 0000
       </code>
-      <code class="font-mono absolute top-0 left-0 op-0 w-full tracking-widest transition"
+      <code
+        class="font-mono absolute top-0 left-0 op-0 w-full tracking-widest transition"
         classList={{
           "!op-80": mouseOver(),
         }}
       >
-        <R> .</R><G>ELF</G><R>...</R>.......<R>.</R>.<G>{">"}</G>.<R>.</R>...<R>.</R><G>#</G>......
+        <R> .</R>
+        <G>ELF</G>
+        <R>...</R>.......<R>.</R>.<G>{">"}</G>.<R>.</R>...<R>.</R>
+        <G>#</G>......
         <br />
-        <G>@</G>.......<G>`</G><G>q</G>..........<G>@</G>.<G>8</G>...<G>@</G>.....
+        <G>@</G>.......<G>`</G>
+        <G>q</G>..........<G>@</G>.<G>8</G>...<G>@</G>.....
         <br />
         ....<G>@</G>.<G>8</G>...<G>@</G>.......<G>@</G>.............
         <br />
@@ -156,10 +164,9 @@ function Binary() {
         <R>..</R>.............<R>.</R>................
         <br />
         <R>..</R>.............<R>..</R>................
-
       </code>
-    </div >
-  )
+    </div>
+  );
 }
 
 export default () => {

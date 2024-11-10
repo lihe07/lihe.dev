@@ -32,14 +32,13 @@ export default (props) => {
       return;
     }
     lastToggleTime = Date.now();
-    setMobileNavOpen(e => !e);
+    setMobileNavOpen((e) => !e);
   }
 
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   function onMobileLinkClick(e) {
     // I am not on mobile
-    if (!mobileNavOpen()) return
+    if (!mobileNavOpen()) return;
 
     e.preventDefault();
     const href = e.target.getAttribute("href");
@@ -48,19 +47,16 @@ export default (props) => {
     setTimeout(() => navigate(href), 100);
   }
 
-
   return (
     <header
-      class="w-full font-sans z-10 box-border px-10 py-10 transition-all-300 overflow-hidden
-      op-0
-      animate-fade-in animate-mode-forwards animate-delay-500 animate-duration-300
+      class="w-full font-sans z-10 box-border px-10 py-10 transition-all-300
+      op-0 animate-fade-in animate-mode-forwards animate-delay-300 animate-duration-300
       "
       classList={{
         "absolute top-15 left-0": isIndex(),
         "absolute top-0": !isIndex(),
       }}
     >
-
       {/* Main */}
       <div class="max-w-300 w-full ma flex justify-between items-center select-none">
         <div class="flex items-center">
@@ -71,11 +67,10 @@ export default (props) => {
             classList={{
               "op-100 pointer-events-none cursor-default": isIndex(),
               "op-70 hover:op-100 active:scale-90": !isIndex(),
-              "!op-70 !cursor-default !pointer-events-none": props.isDuringTransition
+              "!op-70 !cursor-default !pointer-events-none":
+                props.isDuringTransition,
             }}
-
             onClick={onMobileLinkClick}
-
           >
             lihe.dev
           </A>
@@ -91,7 +86,8 @@ export default (props) => {
                   inactiveClass="op-70 hover:op-100 active:scale-90"
                   activeClass="op-100"
                   classList={{
-                    "!op-70 cursor-default pointer-events-none": props.isDuringTransition
+                    "!op-70 cursor-default pointer-events-none":
+                      props.isDuringTransition,
                   }}
                 >
                   {route.name}
@@ -102,36 +98,40 @@ export default (props) => {
         </div>
         {/* Mobile Nav */}
         <div class="sm:hidden relative w-7 h-7" onClick={toggleMobileNav}>
-          <div class="i-mdi-menu absolute w-full h-full transition"
+          <div
+            class="i-mdi-menu absolute w-full h-full transition"
             classList={{
               "op-0": mobileNavOpen(),
-              "op-100": !mobileNavOpen()
+              "op-100": !mobileNavOpen(),
             }}
           ></div>
-          <div class="i-mdi-close absolute w-full h-full transition"
+          <div
+            class="i-mdi-close absolute w-full h-full transition"
             classList={{
               "op-0 animate-rotate-out animate-duration-150": !mobileNavOpen(),
-              "op-100 animate-rotate-in animate-duration-150": mobileNavOpen()
+              "op-100 animate-rotate-in animate-duration-150": mobileNavOpen(),
             }}
           ></div>
         </div>
 
-        <div class="fixed sm:hidden bg-zinc-9 w-full z--2 transition-all h-full top-0 left-0"
+        <div
+          class="fixed sm:hidden bg-zinc-9 w-full z--2 transition-all h-full top-0 left-0"
           classList={{
             "backdrop-blur-0 bg-op-0 pointer-events-none": !mobileNavOpen(),
             "backdrop-blur-10 bg-op-30 pointer-events-all": mobileNavOpen(),
           }}
           onClick={() => setMobileNavOpen(false)}
-        >
-        </div>
+        ></div>
 
-        <div class="fixed sm:hidden left-0 w-screen  z--1 transition-all"
+        <div
+          class="fixed sm:hidden left-0 w-screen  z--1 transition-all"
           classList={{
             "op-0 top--30 pointer-events-none": !mobileNavOpen(),
             "op-100 top-0": mobileNavOpen(),
           }}
         >
-          <div class="px-10 pb-10 bg-zinc-9"
+          <div
+            class="px-10 pb-10 bg-zinc-9"
             classList={{
               "pt-40": isIndex(),
               "pt-30": !isIndex(),
@@ -152,10 +152,8 @@ export default (props) => {
               )}
             </For>
           </div>
-
         </div>
-
       </div>
-    </header >
+    </header>
   );
 };
