@@ -1,4 +1,4 @@
-import { For, onMount } from "solid-js";
+import { For } from "solid-js";
 import { useNavigate } from "@solidjs/router";
 
 import Button from "./Button";
@@ -92,28 +92,21 @@ const Right = () => {
   );
 };
 export default () => {
-  let isFirstLoad;
-  if (typeof window !== "undefined" && window.isNotFirstLoad) {
-    isFirstLoad = false;
-  } else {
-    isFirstLoad = true;
-  }
-
-  onMount(() => {
-    window.isNotFirstLoad = true;
-  });
-
   return (
     <section
-      class="h-screen w-full bg-center bg-cover op-0"
-      classList={{
-        "animate-fade-in animate-mode-forwards animate-delay-500 animate-duration-800":
-          isFirstLoad,
-        "!op-100": !isFirstLoad,
-      }}
-      style={{ "background-image": `url(${bg})` }}
+      class="h-screen w-full relative"
     >
-      <div class="h-full w-full backdrop-blur bg-black bg-op-50 flex items-center px-10 box-border op-0 animate-fade-in animate-mode-forwards animate-delay-300 animate-duration-300">
+      <div
+        class="absolute top-0 bottom-0 left-0 right-0 bg-center bg-cover
+        animate-pulse
+        animate-duration-10000
+        animate-count-infinite
+        animate-delay-1000
+        "
+        style={{ "background-image": `url(${bg})` }}
+      >
+      </div>
+      <div class="h-full w-full backdrop-blur bg-black bg-op-50 flex items-center px-10 box-border">
         <div class="max-w-300 ma w-full flex justify-between">
           {/* Left */}
           <Left />
