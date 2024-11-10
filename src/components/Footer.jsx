@@ -17,7 +17,7 @@ function Socials() {
     <div class="flex items-center  justify-between">
       <For each={socials}>
         {(social) => (
-          <a href={social.href} target="_blank" rel="noreferrer">
+          <a href={social.href} target="_blank" rel="noreferrer" class="op-70 transition hover:op-100 active:scale-95" >
             <img src={social.icon} alt={social.href} class="w-10 h-10" />
           </a>
         )}

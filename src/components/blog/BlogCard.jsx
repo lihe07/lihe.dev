@@ -7,14 +7,14 @@ export default function Blog(props) {
     <div
       class={
         "flex md:flex-row md:h-60 h-unset flex-col color-white font-sans bg-zinc-8 rounded-2xl " +
-          props.class || ""
+        props.class || ""
       }
       href={props.href}
     >
       <img
         src={props.cover}
         alt={props.title}
-        class="rounded-2xl md:h-full h-60 md:w-40% w-full"
+        class="rounded-2xl md:h-full h-60 md:w-40% w-full object-cover object-center"
       />
       <div class="py-7 flex flex-col justify-center md:w-60% w-full px-7 box-border">
         <h2 class="text-2xl mt-0 leading-relaxed md:line-clamp-2 line-clamp-5">
