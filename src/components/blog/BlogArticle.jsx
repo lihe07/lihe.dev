@@ -40,6 +40,7 @@ function fixStyleProperties(node) {
  * @typedef Props
  * @property {string} title
  * @property {string} [cover]
+ * @property {string | undefined} [wideCover]
  * @property {Tag[]} tags
  * @property {JSX.Element} children
  * @property {Date | undefined} date
@@ -51,7 +52,7 @@ export default (props) => {
 
   return (
     <>
-      <PageHead title={props.title} cover={props.cover}>
+      <PageHead title={props.title} cover={props.wideCover || props.cover}>
         <p class="op-70 text-xl font-sans">
           <BlogDescription {...props} />
         </p>
