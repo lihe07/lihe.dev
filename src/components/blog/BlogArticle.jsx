@@ -1,35 +1,8 @@
 import Tag from "./Tag";
 import PageHead from "../PageHead";
-import "./markdown.css";
+import "~/assets/styles/markdown.css";
 import { BlogDescription } from "./BlogDescription";
 import { For } from "solid-js";
-
-function parseStyleString(inputString) {
-  const keyValuePairs = inputString.split(";");
-  const resultObject = {};
-
-  keyValuePairs.forEach((pair) => {
-    const [key, value] = pair.split(":");
-    if (key && value) {
-      resultObject[key.trim()] = value.trim();
-    }
-  });
-
-  return resultObject;
-}
-
-function fixStyleProperties(node) {
-  if (!node) return;
-
-  const styleString = node.attributes["style"]?.value;
-  if (styleString && styleString.length) {
-    Object.assign(node.style, parseStyleString(styleString));
-  }
-
-  for (let i = 0; i < node.children.length; i++) {
-    fixStyleProperties(node.children[i]);
-  }
-}
 
 /**
  * @typedef Tag
@@ -48,8 +21,6 @@ function fixStyleProperties(node) {
  * @param {Props} props
  */
 export default (props) => {
-  let article;
-
   return (
     <>
       <PageHead title={props.title} cover={props.wideCover || props.cover}>
@@ -61,7 +32,7 @@ export default (props) => {
         </div>
       </PageHead>
       <div class="px-10 my-10">
-        <article ref={article} class="markdown-body ma max-w-300 ">
+        <article class="markdown-body ma max-w-300 ">
           {props.children}
         </article>
       </div>

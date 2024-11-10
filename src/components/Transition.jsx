@@ -4,6 +4,11 @@ import { useIsRouting } from "@solidjs/router";
 
 // Removes query string, hash and trailing slash from the pathname
 function trimPathname(s) {
+  if (!s) return "";
+  if (typeof s !== "string") {
+    return ""
+  }
+
   // 1. Remove query string
   s = s.split("?")[0];
   // 2. Remove hash

@@ -11,14 +11,14 @@ const Left = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <p class="font-sans op-60 text-7 mt-0 mb-5">Hello!!</p>
-      <p class="font-serif md:text-13 text-10 mt-0 mr-5 leading-snug">
+      <p class="font-sans op-60 sm:text-7 text-5 mt-0 sm:mb-5 mb-3">Hello!!</p>
+      <p class="font-serif md:text-13 sm:text-10 text-9 mt-0 mr-7 leading-snug">
         I'm <i>He Li</i>, a student and a <br />
         Science + AI fan
       </p>
 
       {/* Buttons */}
-      <div class="flex font-sans items-center sm:position-unset absolute sm:m0 mr-10">
+      <div class="flex font-sans items-center absolute sm:mr-10 mr-10 sm:gap-5 gap-3">
         <Button
           onClick={() => {
             document.getElementById("scroll").scrollTo({
@@ -41,7 +41,7 @@ const Left = () => {
           </svg>
           Read More
         </Button>
-        <span class="op-80 mx-5">Or</span>
+        <span class="op-80">Or</span>
         <Button class={style.contact} onClick={() => navigate("/contact")}>
           <svg
             class={"transition-all " + style.first}

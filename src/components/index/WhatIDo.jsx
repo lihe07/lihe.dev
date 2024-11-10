@@ -1,5 +1,8 @@
 import BlazeSlider from "~/assets/scripts/BlazeSlider";
 import "blaze-slider/dist/blaze.css";
+
+import "~/assets/styles/swiper.css";
+
 import TagCard from "./TagCard";
 import { createSignal, For, onMount } from "solid-js";
 import Section from "../Section";
@@ -175,10 +178,13 @@ export default () => {
   onMount(() => {
     slider = new BlazeSlider(document.getElementById("cards-slider"), {
       all: {
-        enableAutoplay: false,
+        enableAutoplay: true,
         autoplayInterval: 3000,
         transitionDuration: 300,
         slidesToShow: 3,
+      },
+      "(max-width: 1024px)": {
+        slidesToShow: 2,
       },
       "(max-width: 768px)": {
         slidesToShow: 1,
@@ -232,6 +238,17 @@ export default () => {
                   />
                 </div>
               </div>
+
+              <div class="flex items-center justify-center mt-10 gap-4">
+                <button class="blaze-prev color-white op-70 hover:op-100 active:scale-90 transition">
+                  <div class="i-fluent-chevron-left-24-filled w-8 h-8"></div>
+                </button>
+                <div class="blaze-pagination"></div>
+                <button class="blaze-next color-white op-70 hover:op-100 active:scale-90 transition">
+                  <div class="i-fluent-chevron-right-24-filled w-8 h-8"></div>
+                </button>
+              </div>
+
             </div>
           </div>
         </div>
