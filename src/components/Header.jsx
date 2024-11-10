@@ -114,6 +114,7 @@ export default (props) => {
           ></div>
         </div>
 
+        {/* Mobile Nav Backdrop */}
         <div
           class="fixed sm:hidden bg-zinc-9 w-full z--2 transition-all h-full top-0 left-0"
           classList={{
@@ -123,6 +124,7 @@ export default (props) => {
           onClick={() => setMobileNavOpen(false)}
         ></div>
 
+        {/* Mobile Nav */}
         <div
           class="fixed sm:hidden left-0 w-screen  z--1 transition-all"
           classList={{
@@ -131,7 +133,7 @@ export default (props) => {
           }}
         >
           <div
-            class="px-10 pb-10 bg-zinc-9"
+            class="px-10 pb-10 bg-zinc-9 rounded-b-8"
             classList={{
               "pt-40": isIndex(),
               "pt-30": !isIndex(),
