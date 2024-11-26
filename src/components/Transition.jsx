@@ -57,8 +57,9 @@ export default function Transition(props) {
 
   return (
     <div
-      class="op-0 transition-all-300 scale-101"
-      classList={{ "!op-100 !scale-100 !blur-0 !scale-100": show() }}
+      style="opacity: 0; transform: scale(1.01)"
+      class="transition-all-300"
+      classList={{ "!op-100 !scale-100": show() }}
     >
       {props.children}
     </div>
