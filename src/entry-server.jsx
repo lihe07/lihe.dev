@@ -15,7 +15,13 @@ export default createHandler(() => (
           <link rel="icon" href="/favicon.ico" />
           {/* This is to ensure that some classes are available before UnoCSS is loaded */}
           <style type="text/css">{css}</style>
-          {/* <script defer data-domain="lihe.dev" src="https://anna.bwrrc.org.cn/js/script.js"></script> */}
+
+          {/* For Analytics */}
+          <noscript>
+            <img alt="pixel" src="https://anna.bwrrc.org.cn/ingress/26336fde-0c62-491f-b96d-b531266f6ec2/pixel.gif" />
+          </noscript>
+          <script defer src="https://anna.bwrrc.org.cn/ingress/26336fde-0c62-491f-b96d-b531266f6ec2/script.js"></script>
+
           {assets}
         </head>
         <body style="background: #0f0f0f; margin: 0; color: white;">
